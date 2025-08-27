@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Home />
-    <router-view />
+  <!-- Define key components and routes to display them -->
     <Navbar />
+    <router-view />
   </div>
 </template>
 
@@ -10,7 +10,9 @@
 
 <script setup>
 import Navbar from './components/Navbar.vue';
-import Home from './pages/Home.vue';
+//import Contact from './pages/Contact.vue';
+//import Home from './pages/Home.vue';
+//import Experience from './pages/Experience.vue';
 
 </script>
 
