@@ -1,8 +1,6 @@
 <template>
-  <div>
-  <!-- Define key components and routes to display them -->
-    <Navbar />
-    <router-view />
+  <div class="bg-primary text-white h-screen flex items-center justify-center">
+    <h1 class="text-4xl font-bold">Tailwind is working 🎉</h1>
   </div>
 </template>
 
