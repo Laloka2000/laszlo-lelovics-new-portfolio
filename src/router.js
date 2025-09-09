@@ -14,8 +14,8 @@ const routes = [
   { path: "/contact", name: "contact", component: Contact },
 ];
 
-//Create router
-const router = createRouter({
+//Create router 
+const router = createRouter({ // This line of code is creating a new Vue Router instance. 
   history: createWebHistory(),
   routes,
 });

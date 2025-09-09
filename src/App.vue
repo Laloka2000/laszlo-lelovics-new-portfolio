@@ -1,6 +1,7 @@
 <template>
-  <div class="bg-primary text-white h-screen flex items-center justify-center">
-    <h1 class="text-4xl font-bold">Tailwind is working 🎉</h1>
+  <div id="app">
+    <Navbar />
+    <router-view />
   </div>
 </template>
 
