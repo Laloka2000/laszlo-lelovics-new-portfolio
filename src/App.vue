@@ -1,7 +1,10 @@
 <template>
-  <div id="app">
+  <div id="app" class="min-h-screen bg-gray-50 dark:bg-gray-900">
     <Navbar />
-    <router-view />
+    <main class="pt-16">
+      <router-view />
+    </main>
+    <Footer/>
   </div>
 </template>
 

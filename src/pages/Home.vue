@@ -15,12 +15,21 @@
           <RouterLink to="/projects"
             class="bg-blue-600 text-white px-6 py-3 rounded shadow hover:bg-blue-700 transition">View Projects
           </RouterLink>
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7" />
           </svg>
           <a href="/contact"
             class="inline-flex items-center gap-2 border border-blue-600 text-blue-600 px-5 py-3 rounded-lg hover:bg-blue-50 transition">Get
             in Touch</a>
+        </div>
+        <div class="mt-8 text-gray-500">
+          <h2 class="text-3xl font-semibold">Tech stack</h2>
+          <ul class="flex gap-2">
+            <li>Vue</li>
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
         </div>
       </div>
       <div class="w-92 h-92 bg-white rounded-2xl shadow-lg flex items-center justify-center overflow-hidden">
