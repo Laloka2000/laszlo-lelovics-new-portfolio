@@ -22,15 +22,19 @@
             class="inline-flex items-center gap-2 border border-blue-600 text-blue-600 px-5 py-3 rounded-lg hover:bg-blue-50 transition">Get
             in Touch</a>
         </div>
+        <!-- Tech stack -->
+        <!--TODO : add tech stack with svg icons using level of experience animations-->
+        <!--
         <div class="mt-8 text-gray-500">
           <h2 class="text-3xl font-semibold">Tech stack</h2>
-          <ul class="flex gap-2">
-            <li>Vue</li>
-            <li>JavaScript</li>
-            <li>HTML</li>
-            <li>CSS</li>
+          <ul class="flex gap-2" v-for="(tech, index) in techStack" :key="index">
+            <li
+              class="px-3 py-1 bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200 text-sm rounded-full">
+              {{ tech }}
+            </li>
           </ul>
         </div>
+        -->
       </div>
       <div class="w-92 h-92 bg-white rounded-2xl shadow-lg flex items-center justify-center overflow-hidden">
         <img :src="profilePic" alt="Profile photo" class="object-cover w-full h-full" />
@@ -42,6 +46,10 @@
 <script setup>
 import profilePic from '../assets/images/photo.jpg'
 import { RouterLink } from 'vue-router';
+import  {ref} from 'vue';
+
+const techStack = ref(['Vue', 'JavaScript', 'HTML', 'CSS', 'Tailwind', 'Figma', 'Git']);
+
 </script>
 
 <style></style>

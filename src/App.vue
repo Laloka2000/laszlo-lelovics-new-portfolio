@@ -1,9 +1,7 @@
 <template>
-  <div id="app" class="min-h-screen bg-gray-50 dark:bg-gray-900">
+  <div id="app" class="min-h-screen flex flex-col">
     <Navbar />
-    <main class="pt-16">
-      <router-view />
-    </main>
+    <router-view />
     <Footer/>
   </div>
 </template>
