@@ -17,7 +17,7 @@ const techStacks = [
 
 <template>
   <section
-    class="min-h-[calc(67vh-6rem)] flex flex-col-reverse md:flex-row items-center justify-center gap-12"
+    class="min-h-[calc(60vh-6rem)] flex flex-col-reverse md:flex-row items-center justify-center gap-12"
   >
     <!-- LEFT: Text Content -->
     <div
