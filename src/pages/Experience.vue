@@ -1,9 +1,9 @@
 <template>
-  <section class="min-h-screen p-8 bg-gray-100">
+  <section class="min-h-[calc(67vh-6rem)] flex-col-reverse md:flex-row items-center justify-center gap-12">
     <h1 class="text-4xl font-bold mb-8">Experience</h1>
 
     <div class="space-y-6">
-      <div class="p-6 bg-white shadow rounded">
+      <div class="p-15 bg-black shadow rounded">
         <h2 class="text-2xl font-semibold">Software Engineer</h2>
         <p class="text-gray-600">Company ABC | Jan 2022 – Present</p>
         <ul class="list-disc list-inside mt-2 text-gray-700">
@@ -13,7 +13,7 @@
         </ul>
       </div>
 
-      <div class="p-6 bg-white shadow rounded">
+      <div class="p-15 bg-black shadow rounded">
         <h2 class="text-2xl font-semibold">Frontend Developer</h2>
         <p class="text-gray-600">Company XYZ | Jul 2020 – Dec 2021</p>
         <ul class="list-disc list-inside mt-2 text-gray-700">

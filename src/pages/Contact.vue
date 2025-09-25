@@ -74,7 +74,7 @@ const sendEmail = (e) => {
 </script>
 
 <template>
-  <section class="min-h-screen bg-gray-50 dark:bg-gray-900 py-16">
+  <section class="min-h-[calc(67vh-6rem)] bg-gray-50 dark:bg-gray-900 py-16">
     <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
       <!-- LEFT: contact info -->
       <div class="flex flex-col justify-center">

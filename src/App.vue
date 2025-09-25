@@ -1,8 +1,15 @@
 <template>
-  <div id="app" class="min-h-screen flex flex-col">
+  <div class="min-h-screen flex flex-col">
+    <!-- Navbar -->
     <Navbar />
-    <router-view />
-    <Footer/>
+
+    <!-- Main content -->
+    <main class="flex-1 max-w-6xl mx-auto px-6 py-12">
+      <RouterView />
+    </main>
+
+    <!-- Footer -->
+    <Footer />
   </div>
 </template>
 

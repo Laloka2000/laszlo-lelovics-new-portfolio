@@ -1,55 +1,98 @@
+<script setup>
+import profilePic from "../assets/images/photo.jpg"
+
+// you can swap these logos for official ones later
+const techStacks = [
+  { name: "Vue.js", logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg" },
+  { name: "React", logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" },
+  { name: "Tailwind CSS", logo: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" },
+  { name: "Bootstrap", logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg" },
+  { name: "JavaScript", logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" },
+  { name: "Node.js", logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" },
+  { name: "PHP", logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" },
+  { name: "WordPress", logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/wordpress/wordpress-plain.svg" },
+  { name: "Git", logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" },
+]
+</script>
+
 <template>
-  <section class="min-h-screen bg-gradient-to-br from-sky-50 to-white flex items-center">
-    <div class="container mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-10">
-      <!-- Left: text block with fade-up animation -->
-      <div class="flex-1" v-motion :initial="{ opacity: 0, y: 20 }"
-        :enter="{ opacity: 1, y: 0, transition: { duration: 0.7 } }">
-        <h1 class="text-5xl md:text-6xl font-extrabold leading-tight md-4">
-          Hey - I'm Laszlo Lelovics <span class="wave">👋</span>
-        </h1>
-        <p class="text-lg text-gray-700 mb-6 max-w-xl">
-          Frontend dev who builds fast, accessible UIs with Vue. I focus on clean code, subtle motion and tiny load
-          times — the kind of stuff clients love.
-        </p>
-        <div class="flex flex-wrap gap-4">
-          <RouterLink to="/projects"
-            class="bg-blue-600 text-white px-6 py-3 rounded shadow hover:bg-blue-700 transition">View Projects
-          </RouterLink>
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7" />
-          </svg>
-          <a href="/contact"
-            class="inline-flex items-center gap-2 border border-blue-600 text-blue-600 px-5 py-3 rounded-lg hover:bg-blue-50 transition">Get
-            in Touch</a>
-        </div>
-        <!-- Tech stack -->
-        <!--TODO : add tech stack with svg icons using level of experience animations-->
-        <!--
-        <div class="mt-8 text-gray-500">
-          <h2 class="text-3xl font-semibold">Tech stack</h2>
-          <ul class="flex gap-2" v-for="(tech, index) in techStack" :key="index">
-            <li
-              class="px-3 py-1 bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200 text-sm rounded-full">
-              {{ tech }}
-            </li>
-          </ul>
-        </div>
-        -->
+  <section
+    class="min-h-[calc(67vh-6rem)] flex flex-col-reverse md:flex-row items-center justify-center gap-12"
+  >
+    <!-- LEFT: Text Content -->
+    <div
+      class="text-center md:text-left space-y-6"
+      v-motion
+      :initial="{ opacity: 0, x: -40 }"
+      :enter="{ opacity: 1, x: 0, transition: { duration: 0.8 } }"
+    >
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+        Hi, I’m <span class="text-blue-600">Laci</span> 👋
+      </h1>
+
+      <p class="text-gray-600 dark:text-gray-300 max-w-lg mx-auto md:mx-0">
+        I’m a passionate <span class="font-semibold">Software Engineer</span> who
+        loves building modern web apps with
+        <span class="text-blue-500">Vue.js</span> &
+        <span class="text-teal-500">Tailwind CSS</span>.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+        <RouterLink
+          to="/projects"
+          class="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg shadow hover:bg-blue-700 transition"
+        >
+          View My Projects
+        </RouterLink>
+        <RouterLink
+          to="/contact"
+          class="px-6 py-3 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+        >
+          Contact Me
+        </RouterLink>
       </div>
-      <div class="w-92 h-92 bg-white rounded-2xl shadow-lg flex items-center justify-center overflow-hidden">
-        <img :src="profilePic" alt="Profile photo" class="object-cover w-full h-full" />
+    </div>
+
+    <!-- RIGHT: Profile Picture -->
+    <div
+      class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-lg"
+      v-motion
+      :initial="{ opacity: 0, x: 40 }"
+      :enter="{ opacity: 1, x: 0, transition: { duration: 0.8, delay: 0.2 } }"
+    >
+      <img
+        :src="profilePic"
+        alt="Profile Picture"
+        class="w-full h-full object-cover"
+      />
+    </div>
+  </section>
+
+  <!-- Tech Stack Section -->
+  <section class="py-16 text-center">
+    <h2
+      class="text-3xl md:text-4xl font-bold mb-8"
+      v-motion
+      :initial="{ opacity: 0, y: 20 }"
+      :enter="{ opacity: 1, y: 0, transition: { duration: 0.6 } }"
+    >
+      Tech Stack ⚡
+    </h2>
+
+    <div
+      class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 place-items-center"
+      v-motion
+      :initial="{ opacity: 0 }"
+      :enter="{ opacity: 1, transition: { delay: 0.2, duration: 1 } }"
+    >
+      <div
+        v-for="tech in techStacks"
+        :key="tech.name"
+        class="flex flex-col items-center space-y-2 hover:scale-110 transition-transform"
+      >
+        <img :src="tech.logo" :alt="tech.name" class="w-16 h-16" />
+        <span class="text-sm font-medium">{{ tech.name }}</span>
       </div>
     </div>
   </section>
 </template>
-
-<script setup>
-import profilePic from '../assets/images/photo.jpg'
-import { RouterLink } from 'vue-router';
-import  {ref} from 'vue';
-
-const techStack = ref(['Vue', 'JavaScript', 'HTML', 'CSS', 'Tailwind', 'Figma', 'Git']);
-
-</script>
-
-<style></style>

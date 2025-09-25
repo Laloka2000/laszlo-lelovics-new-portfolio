@@ -1,8 +1,8 @@
 <template>
-    <section class="py-16 bg-gray-50">
+    <section class="min-h-[calc(67vh-6rem)] bg-gray-50 dark:bg-gray-900 py-16">
         <div class="max-w-6xl mx-auto px-6">
             <!-- Heading -->
-            <h2 class="text-4xl font-bold text-center text-gray-800 dark:text-black mb-12" v-motion
+            <h2 class="text-4xl font-bold text-center text-gray-800 dark:text-white mb-12" v-motion
                 :initial="{ opacity: 0, y: -20 }" :enter="{ opacity: 1, y: 0, transition: { duration: 0.8 } }">
                 My Projects
             </h2>
@@ -38,7 +38,7 @@
                             Live Demo
                         </a>
                         <a :href="project.codeLink" target="_blank"
-                            class="flex-1 text-center px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-700 transition">
+                            class="flex-1 text-center px-4 py-2 border border-white-600 text-white-600 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-700 transition">
                             Code
                         </a>
                     </div>
