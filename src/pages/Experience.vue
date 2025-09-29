@@ -1,36 +1,46 @@
 <template>
-  <section class="min-h-[calc(67vh-6rem)] flex-col-reverse md:flex-row items-center justify-center gap-12">
-    <h1 class="text-4xl font-bold mb-8">Experience</h1>
+  <section class="min-h-[calc(80vh-12rem)]  bg-gray-50 dark:bg-gray-900 py-25">
+    <div class="max-w-6xl mx-auto px-6">
+      <!-- Title -->
+      <h2 class="text-4xl font-bold text-center text-white mb-12">Szakmai tapasztalat és tanulmányok 💼</h2>
+      <div class="flex flex-col space-y-10">
+        <!-- Work Experience -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-12">
+          <h3 class="text-2xl font-semibold text-white">Szoftver és alkalmazás fejlesztő</h3>
+          <p class="text-sm text-gray-400">2024 - 2025 | ITZen Kft</p>
+          <ul class="mt-2 text-gray-300 list-disc list-inside space-y-1">
+            <li>Webalkalmazások fejlesztése és karbantartása <span class="text-blue-400">Vue.js, Laravel és
+                Bootstrap</span> használatával</li>
+            <li>Reszponzív és felhasználóbarát felületek létrehozása</li>
+            <li>Együttműködés a tesztelőkkel és backend fejlesztőkkel a zökkenőmentes felhasználói élmény érdekében</li>
+            <li>Hibák javítása, kód karbantartása és teljesítmény optimalizálása</li>
+            <li>Weboldalak/webshopok fejlesztése és készítése WordPress és WooCommerce segítségével</li>
+          </ul>
+        </div>
 
-    <div class="space-y-6">
-      <div class="p-15 bg-black shadow rounded">
-        <h2 class="text-2xl font-semibold">Software Engineer</h2>
-        <p class="text-gray-600">Company ABC | Jan 2022 – Present</p>
-        <ul class="list-disc list-inside mt-2 text-gray-700">
-          <li>Developed frontend components using Vue.js and Tailwind CSS.</li>
-          <li>Improved site performance by 30% through code optimization.</li>
-          <li>Worked closely with designers to implement responsive UI.</li>
-        </ul>
-      </div>
-
-      <div class="p-15 bg-black shadow rounded">
-        <h2 class="text-2xl font-semibold">Frontend Developer</h2>
-        <p class="text-gray-600">Company XYZ | Jul 2020 – Dec 2021</p>
-        <ul class="list-disc list-inside mt-2 text-gray-700">
-          <li>Built interactive dashboards with Vue and Chart.js.</li>
-          <li>Collaborated with backend team to integrate REST APIs.</li>
-        </ul>
+        <!-- Studies -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-12">
+          <h3 class="text-2xl font-semibold text-white">Programtervező informatikus (FOSZK)</h3>
+          <p class="text-sm text-gray-400">2021 - 2024 | Neumann János Egyetem</p>
+          <ul class="mt-2 text-gray-300 list-disc list-inside space-y-1">
+            <li>Tantárgyak: <span class="text-blue-400">Programozás, Webfejleszés, Adatbázisok, Szoftvertechnológiák,
+                Mobil fejlesztés, Algoritmusok és adatstruktúrák</span></li>
+            <li>Programozási nyelvek: <span class="text-blue-400">Java, C++, C#, JavaScript, PHP</span></li>
+          </ul>
+          <br>
+          <p>
+            <span class="font-semibold">Projektmunka: </span>Csapatmunka keretein belül egy könyvtár kezelő alkalamzást
+            terveztünk és fejlesztettünk le. <span class="text-blue-400">PHP, JavaScript, HTML, CSS, MySQL</span>
+            technológiák felhasználásával. Az alkalmazás főbb funkciói közé tartozik a könyvek hozzáadása, törlése, keresése és kategorizálása,
+            valamint a felhasználók kezelése és jogosultságok beállítása. A projekt során elsajátítottam a webfejlesztés
+            alapjait, a csapatmunkát és a hatékony kommunikációt. Az én feladatom a front-end fejlesztés és a felhasználói felület kialakítása volt valamint a projekt
+            dokumentációjának elkészítése.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-
 </script>
-
-<style>
-section {
-    padding: 2rem;
-}
-</style>

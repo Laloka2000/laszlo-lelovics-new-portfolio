@@ -1,10 +1,10 @@
 <template>
-    <section class="min-h-[calc(67vh-6rem)] bg-gray-50 dark:bg-gray-900 py-16">
+    <section class="min-h-[calc(67vh-6rem)]  bg-gray-50 dark:bg-gray-900 py-16">
         <div class="max-w-6xl mx-auto px-6">
             <!-- Heading -->
             <h2 class="text-4xl font-bold text-center text-gray-800 dark:text-white mb-12" v-motion
                 :initial="{ opacity: 0, y: -20 }" :enter="{ opacity: 1, y: 0, transition: { duration: 0.8 } }">
-                My Projects
+                Projektek 🚀
             </h2>
 
             <!-- Projects Grid -->
@@ -35,11 +35,11 @@
                     <div class="flex gap-4 mt-auto">
                         <a :href="project.demoLink" target="_blank"
                             class="flex-1 text-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
-                            Live Demo
+                            Élő demó
                         </a>
                         <a :href="project.codeLink" target="_blank"
                             class="flex-1 text-center px-4 py-2 border border-white-600 text-white-600 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-700 transition">
-                            Code
+                            Kódbázis
                         </a>
                     </div>
                 </div>
@@ -53,33 +53,34 @@ import { ref } from 'vue'
 
 const projects = ref([
     {
-        title: 'Portfolio Website',
-        description: 'A personal portfolio website built with Vue.js and Tailwind CSS to showcase my projects and skills.',
-        tech: ['Vue.js', 'Tailwind CSS', 'JavaScript'],
-        demoLink: 'https://myportfolio.com',
-        codeLink: 'https://github.com/laszlolelo/Portfolio'
+        title: 'Jegyzet kezelő alkalmazás',
+        description: 'Egy egyszerű jegyzet alkalmazás, amely lehetővé teszi a felhasználók számára, hogy létrehozzanak, szerkesszenek és töröljenek jegyzeteket egy felhasználóbarát felületen.',
+        tech: ['React.js', 'JavaScript', 'Vercel'],
+        demoLink: 'https://keeperapp-beta.vercel.app/',
+        codeLink: 'https://github.com/Laloka2000/keeperapp'
     },
     {
-        title: 'Task Manager App',
-        description: 'A task management application that allows users to create, edit, and delete tasks with a user-friendly interface.',
-        tech: ['Vue.js', 'Vuex', 'Firebase'],
-        demoLink: 'https://taskmanager.com',
-        codeLink: 'https://github.com/laszlolelo/TaskManager'
+        title: 'Feladatkezelő alkalmazás',
+        description: 'Egy feladatkezelő alkalmazás, amely segít a felhasználóknak nyomon követni napi feladataikat és határidőiket egy intuitív felületen.',
+        tech: ['Vue.js', 'Netlify'],
+        demoLink: 'https://tangerine-madeleine-134cfe.netlify.app/',
+        codeLink: 'https://github.com/Laloka2000/vue-todoapp'
     },
     {
-        title: 'E-commerce Website',
-        description: 'An e-commerce website built with Vue.js and Tailwind CSS to sell products online.',
-        tech: ['Vue.js', 'Tailwind CSS', 'JavaScript'],
-        demoLink: 'https://ecommerce.com',
-        codeLink: 'https://github.com/laszlolelo/Ecommerce'
+        title: 'Kockajáték',
+        description: 'Egy egyszerű kockajáték, ahol a felhasználók dobhatnak két kockával, és a cél a lehető legmagasabb pontszám elérése.',
+        tech: ['JavaScript', 'HTML5', 'CSS3'],
+        demoLink: 'https://github.com/Laloka2000/PigGame',
+        codeLink: 'https://github.com/Laloka2000/PigGame'
     },
     {
-        title: 'Blog Platform',
-        description: 'A blogging platform that allows users to create and share blog posts with a clean and modern design.',
-        tech: ['Vue.js', 'Nuxt.js', 'Contentful'],
-        demoLink: 'https://blogplatform.com',
-        codeLink: 'https://github.com/laszlolelo/BlogPlatform'
+        title: 'Időjárás alkalmazás',
+        description: 'Egy időjárás alkalmazás, amely valós idejű időjárási adatokat szolgáltat a felhasználók számára egy letisztult és modern felületen.',
+        tech: ['Vue.js', 'OpenWeatherMap API', 'Netlify'],
+        demoLink: 'https://vue-weather-app-3aedb.netlify.app/',
+        codeLink: 'https://github.com/Laloka2000/weather-app'
     }
+
 ])
 
 

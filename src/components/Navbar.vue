@@ -1,6 +1,6 @@
 <template>
   <nav class="bg-blue-600 text-white px-6 py-4 flex justify-between items-center">
-    <h1 class="text-lg font-bold">My Portfolio</h1>
+    <h1 class="text-lg font-bold">Portfolió</h1>
 
     <!-- Navigation links -->
     <ul class="hidden md:flex gap-6">
@@ -8,13 +8,13 @@
         <RouterLink class="hover:text-gray-200" to="/">Home</RouterLink>
       </li>
       <li>
-        <RouterLink class="hover:text-gray-200" to="/projects">Projects</RouterLink>
+        <RouterLink class="hover:text-gray-200" to="/projects">Projektek</RouterLink>
       </li>
       <li>
-        <RouterLink class="hover:text-gray-200" to="/experience">Experience</RouterLink>
+        <RouterLink class="hover:text-gray-200" to="/experience">Tapasztalat</RouterLink>
       </li>
       <li>
-        <RouterLink class="hover:text-gray-200" to="/contact">Contact</RouterLink>
+        <RouterLink class="hover:text-gray-200" to="/contact">Kapcsolat</RouterLink>
       </li>
     </ul>
 
@@ -38,13 +38,13 @@
           <RouterLink @click="isOpen = false" to="/">Home</RouterLink>
         </li>
         <li>
-          <RouterLink @click="isOpen = false" to="/projects">Projects</RouterLink>
+          <RouterLink @click="isOpen = false" to="/projects">Projektek</RouterLink>
         </li>
         <li>
-          <RouterLink @click="isOpen = false" to="/experience">Experience</RouterLink>
+          <RouterLink @click="isOpen = false" to="/experience">Tapasztalat</RouterLink>
         </li>
         <li>
-          <RouterLink @click="isOpen = false" to="/contact">Contact</RouterLink>
+          <RouterLink @click="isOpen = false" to="/contact">Kapcsolat</RouterLink>
         </li>
       </ul>
     </transition>
@@ -59,16 +59,3 @@ const isOpen = ref(false);
 </script>
 
 
-<style>
-.slide-fade-enter-active,
-.slide-fade-leave-active {
-  transition: all 0.3s ease;
-}
-
-
-.slide-fade-enter-from,
-.slide-fade-leave-to {
-  opacity: 0;
-  transform: translateY(-10px);
-}
-</style>

@@ -3,28 +3,28 @@
         <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
             <!-- Footer copyright -->
             <div class="text-sm text-center md:text-left">
-                @ {{ new Date().getFullYear() }} Laszlo Lelovics. All rights reserved.
+                @ {{ new Date().getFullYear() }} Lelovics László. Minden jog fenntartva.
             </div>
 
             <!-- Nav links -->
             <nav class="flex flex-wrap justify-center gap-6 text-sm">
                 <RouterLink to="/" class="hover:text-white transition">Home</RouterLink>
-                <RouterLink to="/projects" class="hover:text-white transition">Projects</RouterLink>
-                <RouterLink to="/experience" class="hover:text-white transition">Experience</RouterLink>
-                <RouterLink to="/contact" class="hover:text-white transition">Contact</RouterLink>
+                <RouterLink to="/projects" class="hover:text-white transition">Projektek</RouterLink>
+                <RouterLink to="/experience" class="hover:text-white transition">Tapasztalat</RouterLink>
+                <RouterLink to="/contact" class="hover:text-white transition">Kapcsolat</RouterLink>
             </nav>
 
             <!-- Social icons -->
             <div class="flex gap-5">
-                <a href="https://github.com/yourgithub" target="_blank" aria-label="GitHub">
+                <a href="https://github.com/Laloka2000" target="_blank" aria-label="GitHub">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
                         class="w-6 h-6 invert" />
                 </a>
-                <a href="https://linkedin.com/in/yourlinkedin" target="_blank" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/l%C3%A1szl%C3%B3-lelovics-987046274/" target="_blank" aria-label="LinkedIn">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
                         class="w-6 h-6" />
                 </a>
-                <a href="mailto:youremail@gmail.com" aria-label="Gmail">
+                <a href="mailto:lelovicslaszlo10@gmail.com" aria-label="Gmail">
                     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" class="w-6 h-6" />
                 </a>
             </div>

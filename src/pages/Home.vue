@@ -27,14 +27,11 @@ const techStacks = [
       :enter="{ opacity: 1, x: 0, transition: { duration: 0.8 } }"
     >
       <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
-        Hi, I’m <span class="text-blue-600">Laci</span> 👋
+        Üdv, <span class="text-blue-600">Lelovics László</span> vagyok👋
       </h1>
 
       <p class="text-gray-600 dark:text-gray-300 max-w-lg mx-auto md:mx-0">
-        I’m a passionate <span class="font-semibold">Software Engineer</span> who
-        loves building modern web apps with
-        <span class="text-blue-500">Vue.js</span> &
-        <span class="text-teal-500">Tailwind CSS</span>.
+        Motivált és céltudatos <span class="font-semibold text">Szotverfejlesztő</span> vagyok, aki szeret modern és felhasználóbarát webalkalmazásokat építeni. Folyamatosan tanulok és fejlődök, hogy naprakész maradjak a legújabb technológiákkal és trendekkel.
       </p>
 
       <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
@@ -42,13 +39,13 @@ const techStacks = [
           to="/projects"
           class="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg shadow hover:bg-blue-700 transition"
         >
-          View My Projects
+          Tekintsd meg a projektjeim
         </RouterLink>
         <RouterLink
           to="/contact"
           class="px-6 py-3 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"
         >
-          Contact Me
+          Vedd fel velem a kapcsolatot
         </RouterLink>
       </div>
     </div>
@@ -76,7 +73,7 @@ const techStacks = [
       :initial="{ opacity: 0, y: 20 }"
       :enter="{ opacity: 1, y: 0, transition: { duration: 0.6 } }"
     >
-      Tech Stack ⚡
+      Technológiák ⚡
     </h2>
 
     <div

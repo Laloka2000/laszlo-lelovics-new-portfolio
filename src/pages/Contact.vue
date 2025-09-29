@@ -5,10 +5,10 @@ import { Mail, Github, Linkedin, Globe } from "lucide-vue-next"
 
 // your info
 const contactInfo = {
-  email: "yourmail@gmail.com",
-  github: "https://github.com/yourusername",
-  linkedin: "https://linkedin.com/in/yourusername",
-  dailydev: "https://app.daily.dev/yourusername",
+  email: "lelovicslaszlo10@gmail.com",
+  github: "https://github.com/Laloka2000",
+  linkedin: "https://www.linkedin.com/in/l%C3%A1szl%C3%B3-lelovics-987046274/",
+  dailydev: "https://app.daily.dev/lszllelovics",
 }
 
 // state
@@ -28,15 +28,15 @@ const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 const validateForm = () => {
   errors.value = {}
   if (!name.value.trim()) {
-    errors.value.name = "Name is required"
+    errors.value.name = "Mező kitöltése kötelező"
   }
   if (!email.value.trim()) {
-    errors.value.email = "Email is required"
+    errors.value.email = "Mező kitöltése kötelező"
   } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
-    errors.value.email = "Invalid email format"
+    errors.value.email = "Érvénytelen email cím"
   }
   if (!message.value.trim()) {
-    errors.value.message = "Message cannot be empty"
+    errors.value.message = "Mező kitöltése kötelező"
   }
   return Object.keys(errors.value).length === 0
 }
@@ -60,13 +60,13 @@ const sendEmail = (e) => {
     )
     .then(
       () => {
-        successMessage.value = "Message sent successfully! 🎉"
+        successMessage.value = "Üzenetküldés sikeres 🎉!"
         name.value = ""
         email.value = ""
         message.value = ""
       },
       (error) => {
-        successMessage.value = "Something went wrong. Try again later."
+        successMessage.value = "Üzenetküldési hiba. Kérlek, próbáld újra."
         console.error(error)
       }
     )
@@ -78,9 +78,9 @@ const sendEmail = (e) => {
     <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
       <!-- LEFT: contact info -->
       <div class="flex flex-col justify-center">
-        <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-6">Get in Touch</h2>
+        <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-6">Lépjünk kapcsolatba</h2>
         <p class="text-gray-600 dark:text-gray-300 mb-8">
-          Feel free to reach out through the form or connect with me on social media.
+          Küldj egy üzenetet, vagy keress meg a közösségi médiában.
         </p>
         <ul class="space-y-4 text-gray-700 dark:text-gray-200">
           <li class="flex items-center gap-3">
@@ -109,13 +109,13 @@ const sendEmail = (e) => {
         <form class="space-y-6" @submit="sendEmail">
           <!-- Name -->
           <div>
-            <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Name</label>
+            <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Név</label>
             <input
               v-model="name"
               type="text"
               id="name"
               class="mt-2 w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
-              placeholder="Your name"
+              placeholder="Neved"
             />
             <p v-if="errors.name" class="text-red-500 text-sm mt-1">{{ errors.name }}</p>
           </div>
@@ -135,13 +135,13 @@ const sendEmail = (e) => {
 
           <!-- Message -->
           <div>
-            <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Message</label>
+            <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Üzenet</label>
             <textarea
               v-model="message"
               id="message"
               rows="5"
               class="mt-2 w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
-              placeholder="Write your message..."
+              placeholder="Írd ide az üzeneted..."
             ></textarea>
             <p v-if="errors.message" class="text-red-500 text-sm mt-1">{{ errors.message }}</p>
           </div>
@@ -151,7 +151,7 @@ const sendEmail = (e) => {
             type="submit"
             class="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
           >
-            Send Message
+            Üzenet küldése
           </button>
 
           <!-- Feedback -->
