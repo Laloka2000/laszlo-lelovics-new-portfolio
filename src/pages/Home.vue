@@ -31,7 +31,7 @@ const techStacks = [
       </h1>
 
       <p class="text-gray-600 dark:text-gray-300 max-w-lg mx-auto md:mx-0">
-        Motivált és céltudatos <span class="font-semibold text">Szotfverfejlesztő</span> vagyok, aki szeret modern és felhasználóbarát webalkalmazásokat építeni. Folyamatosan tanulok és fejlődök, hogy naprakész maradjak a legújabb technológiákkal és trendekkel.
+        Motivált és céltudatos <span class="font-semibold text">Szoftverfejlesztő</span> vagyok, aki szeret modern és felhasználóbarát webalkalmazásokat építeni. Folyamatosan tanulok és fejlődök, hogy naprakész maradjak a legújabb technológiákkal és trendekkel.
       </p>
 
       <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
