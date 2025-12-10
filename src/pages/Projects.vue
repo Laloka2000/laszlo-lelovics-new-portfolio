@@ -60,13 +60,6 @@ const projects = ref([
         codeLink: 'https://github.com/Laloka2000/keeperapp'
     },
     {
-        title: 'Feladatkezelő alkalmazás',
-        description: 'Egy feladatkezelő alkalmazás, amely segít a felhasználóknak nyomon követni napi feladataikat és határidőiket egy intuitív felületen.',
-        tech: ['Vue.js', 'Netlify'],
-        demoLink: 'https://tangerine-madeleine-134cfe.netlify.app/',
-        codeLink: 'https://github.com/Laloka2000/vue-todoapp'
-    },
-    {
         title: 'Kockajáték',
         description: 'Egy egyszerű kockajáték, ahol a felhasználók dobhatnak két kockával, és a cél a lehető legmagasabb pontszám elérése.',
         tech: ['JavaScript', 'HTML5', 'CSS3'],
@@ -79,8 +72,13 @@ const projects = ref([
         tech: ['Vue.js', 'OpenWeatherMap API', 'Netlify'],
         demoLink: 'https://vue-weather-app-3aedb.netlify.app/',
         codeLink: 'https://github.com/Laloka2000/weather-app'
+    },
+    {
+        title: 'Technológiai hírek telegram bot',
+        description: 'RSS feedekből olvassa ki a legújabb cikkeket Informatikai jellegű témákban és küldi el a telegramon keresztül a felhasználónak. A megvalósításhoz a Telegram Bot API szolgáltatást használtam',
+        tech: ['Node.js', 'SQLite', 'Railway', 'JavaScript'],
+        codeLink: 'https://github.com/Laloka2000/tech-news-bot'
     }
-
 ])
 
 

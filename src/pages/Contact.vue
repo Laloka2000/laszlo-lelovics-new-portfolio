@@ -8,7 +8,6 @@ const contactInfo = {
   email: "lelovicslaszlo10@gmail.com",
   github: "https://github.com/Laloka2000",
   linkedin: "https://www.linkedin.com/in/l%C3%A1szl%C3%B3-lelovics-987046274/",
-  dailydev: "https://app.daily.dev/lszllelovics",
 }
 
 // state
@@ -96,10 +95,6 @@ const sendEmail = (e) => {
           <li class="flex items-center gap-3">
             <Linkedin class="w-6 h-6 text-blue-700" />
             <a :href="contactInfo.linkedin" target="_blank" class="hover:underline">LinkedIn</a>
-          </li>
-          <li class="flex items-center gap-3">
-            <Globe class="w-6 h-6 text-purple-600" />
-            <a :href="contactInfo.dailydev" target="_blank" class="hover:underline">Daily.dev</a>
           </li>
         </ul>
       </div>

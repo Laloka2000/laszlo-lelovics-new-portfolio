@@ -17,9 +17,6 @@
 
 <script setup>
 import Navbar from './components/Navbar.vue';
-//import Contact from './pages/Contact.vue';
-//import Home from './pages/Home.vue';
-//import Experience from './pages/Experience.vue';
 import Footer from './components/Footer.vue';
 </script>
 
