@@ -1,6 +1,10 @@
 <template>
   <nav class="bg-blue-600 text-white px-6 py-4 flex justify-between items-center">
-    <h1 class="text-lg font-bold">Portfolió</h1>
+    <img 
+     :src="DevLogo"
+     alt="Developer logo"
+     class="w-16"
+    />
 
     <!-- Navigation links -->
     <ul class="hidden md:flex gap-6">
@@ -54,6 +58,7 @@
 <script setup>
 import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
+import DevLogo from "../assets/images/web-development.png"
 
 const isOpen = ref(false);
 </script>
