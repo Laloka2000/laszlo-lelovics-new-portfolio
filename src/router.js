@@ -5,6 +5,7 @@ import Home from "./pages/Home.vue";
 import Projects from "./pages/Projects.vue";
 import Experience from "./pages/Experience.vue";
 import Contact from "./pages/Contact.vue";
+import Results from "./pages/Results.vue";
 
 //Define routes
 const routes = [
@@ -12,6 +13,7 @@ const routes = [
   { path: "/projects", name: "projects", component: Projects },
   { path: "/experience", name: "experience", component: Experience },
   { path: "/contact", name: "contact", component: Contact },
+  { path: "/results", name: "results", component: Results}
 ];
 
 //Create router 

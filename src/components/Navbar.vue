@@ -15,6 +15,9 @@
         <RouterLink class="hover:text-gray-200" to="/projects">Projektek</RouterLink>
       </li>
       <li>
+        <RouterLink class="hover:text-gray-200" to="/results">Eredményeim</RouterLink>
+      </li>
+      <li>
         <RouterLink class="hover:text-gray-200" to="/experience">Tapasztalat</RouterLink>
       </li>
       <li>
