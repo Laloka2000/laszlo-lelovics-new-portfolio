@@ -1,0 +1,28 @@
+{
+    "nav": {
+        "home": "Home",
+        "projects": "Projects",
+        "results": "My Results",
+        "experience": "Experience",
+        "contact": "Contact",
+        "logoAlt": "Developer logo"
+    },
+    "footer": {
+        "home": "Home",
+        "projects": "Projects",
+        "experience": "Experience",
+        "contact": "Contact",
+        "copyright": "Laszlo Lelovics. All rights reserved."
+    },
+    "home": {
+        "greeting": "Hi, I am",
+        "name": "László Lelovics",
+        "nameAlt": "👋",
+        "description": "I'm a motivated and goal-oriented {role} who loves building modern and user-friendly web applications. I continuously learn and improve to stay up-to-date with the latest technologies and trends.",
+        "role": "Software Developer",
+        "viewProjects": "View My Projects",
+        "contact": "Get In Touch",
+        "profileAlt": "Profile Picture",
+        "technologies": "Technologies"
+    }
+}

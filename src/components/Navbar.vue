@@ -1,27 +1,26 @@
 <template>
   <nav class="bg-blue-600 text-white px-6 py-4 flex justify-between items-center">
-    <img 
-     :src="DevLogo"
-     alt="Developer logo"
-     class="w-16"
-    />
+    <img :src="DevLogo" alt="Developer logo" class="w-16" />
 
     <!-- Navigation links -->
-    <ul class="hidden md:flex gap-6">
+    <ul class="hidden md:flex gap-6 items-center">
       <li>
-        <RouterLink class="hover:text-gray-200" to="/">Home</RouterLink>
+        <RouterLink class="hover:text-gray-200" to="/">{{ $t('nav.home') }}</RouterLink>
       </li>
       <li>
-        <RouterLink class="hover:text-gray-200" to="/projects">Projektek</RouterLink>
+        <RouterLink class="hover:text-gray-200" to="/projects">{{ $t('nav.projects') }}</RouterLink>
       </li>
       <li>
-        <RouterLink class="hover:text-gray-200" to="/results">Eredményeim</RouterLink>
+        <RouterLink class="hover:text-gray-200" to="/results">{{ $t('nav.results') }}</RouterLink>
       </li>
       <li>
-        <RouterLink class="hover:text-gray-200" to="/experience">Tapasztalat</RouterLink>
+        <RouterLink class="hover:text-gray-200" to="/experience">{{ $t('nav.experience') }}</RouterLink>
       </li>
       <li>
-        <RouterLink class="hover:text-gray-200" to="/contact">Kapcsolat</RouterLink>
+        <RouterLink class="hover:text-gray-200" to="/contact">{{ $t('nav.contact') }}</RouterLink>
+      </li>
+      <li>
+        <LanguageSwitcher />
       </li>
     </ul>
 
@@ -42,16 +41,22 @@
     <transition name="slide-fade">
       <ul v-if="isOpen" class="md:hidden bg-blue-600 text-white flex flex-col gap-4 px-6 py-4">
         <li>
-          <RouterLink @click="isOpen = false" to="/">Home</RouterLink>
+          <RouterLink @click="isOpen = false" to="/">{{ $t('nav.home') }}</RouterLink>
         </li>
         <li>
-          <RouterLink @click="isOpen = false" to="/projects">Projektek</RouterLink>
+          <RouterLink @click="isOpen = false" to="/projects">{{ $t('nav.projects') }}</RouterLink>
         </li>
         <li>
-          <RouterLink @click="isOpen = false" to="/experience">Tapasztalat</RouterLink>
+          <RouterLink @click="isOpen = false" to="/results">{{ $t('nav.results') }}</RouterLink>
         </li>
         <li>
-          <RouterLink @click="isOpen = false" to="/contact">Kapcsolat</RouterLink>
+          <RouterLink @click="isOpen = false" to="/experience">{{ $t('nav.experience') }}</RouterLink>
+        </li>
+        <li>
+          <RouterLink @click="isOpen = false" to="/contact">{{ $t('nav.contact') }}</RouterLink>
+        </li>
+        <li>
+          <LanguageSwitcher />
         </li>
       </ul>
     </transition>
@@ -62,8 +67,7 @@
 import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
 import DevLogo from "../assets/images/web-development.png"
+import LanguageSwitcher from './LanguageSwitcher.vue';
 
 const isOpen = ref(false);
 </script>
-
-

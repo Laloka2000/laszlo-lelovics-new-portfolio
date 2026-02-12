@@ -3,15 +3,15 @@
         <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
             <!-- Footer copyright -->
             <div class="text-sm text-center md:text-left">
-                @ {{ new Date().getFullYear() }} Lelovics László. Minden jog fenntartva.
+                @ {{ new Date().getFullYear() }} {{ $t('footer.copyright') }}
             </div>
 
             <!-- Nav links -->
             <nav class="flex flex-wrap justify-center gap-6 text-sm">
-                <RouterLink to="/" class="hover:text-white transition">Home</RouterLink>
-                <RouterLink to="/projects" class="hover:text-white transition">Projektek</RouterLink>
-                <RouterLink to="/experience" class="hover:text-white transition">Tapasztalat</RouterLink>
-                <RouterLink to="/contact" class="hover:text-white transition">Kapcsolat</RouterLink>
+                <RouterLink to="/" class="hover:text-white transition">{{ $t('footer.home') }}</RouterLink>
+                <RouterLink to="/projects" class="hover:text-white transition">{{ $t('footer.projects') }}</RouterLink>
+                <RouterLink to="/experience" class="hover:text-white transition">{{ $t('footer.experience') }}</RouterLink>
+                <RouterLink to="/contact" class="hover:text-white transition">{{ $t('footer.contact') }}</RouterLink>
             </nav>
 
             <!-- Social icons -->
@@ -28,7 +28,6 @@
                     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" class="w-6 h-6" />
                 </a>
             </div>
-
         </div>
 
     </footer>

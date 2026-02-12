@@ -1,0 +1,30 @@
+{
+    "nav": {
+        "home": "Kezdőlap",
+        "projects": "Projektek",
+        "results": "Eredményeim",
+        "experience": "Tapasztalat",
+        "contact": "Kapcsolat",
+        "logoAlt": "Fejlesztői logó"
+    },
+
+    "footer": {
+        "home": "Kezdőlap",
+        "projects": "Projektek",
+        "experience": "Tapasztalat",
+        "contact": "Kapcsolat",
+        "copyright": "Lelovics László. Minden jog fenntartva."
+    },
+
+    "home": {
+        "greeting": "Üdv,",
+        "name": "Lelovics László",
+        "nameAlt": "vagyok👋",
+        "description": "Motivált és céltudatos {role} vagyok, aki szeret modern és felhasználóbarát webalkalmazásokat építeni. Folyamatosan tanulok és fejlődök, hogy naprakész maradjak a legújabb technológiákkal és trendekkel.",
+        "role": "Szoftverfejlesztő",
+        "viewProjects": "Tekintsd meg a projektjeim",
+        "contact": "Vedd fel velem a kapcsolatot",
+        "profileAlt": "Profilkép",
+        "technologies": "Technológiák"
+    }
+}
