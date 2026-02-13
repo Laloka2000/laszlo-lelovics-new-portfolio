@@ -28,7 +28,7 @@ The goal is clarity, credibility, and long-term maintainability.
 
 ---
 
-## Tech Stack
+## My Tech Stack
 
 - HTML5  
 - CSS3  
