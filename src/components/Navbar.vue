@@ -1,18 +1,20 @@
 <template>
-  <nav class="bg-blue-600 text-white px-6 py-4 flex justify-between items-center">
+  <nav class="bg-navy text-white shadow-lg px-6 py-4 flex items-center justify-between">
     <img :src="DevLogo" alt="Developer logo" class="w-16" />
 
     <!-- Navigation links -->
-    <ul class="hidden md:flex gap-6 items-center">
+    <ul class="hidden md:flex space-x-8">
       <li>
         <RouterLink class="hover:text-gray-200" to="/">{{ $t('nav.home') }}</RouterLink>
       </li>
       <li>
         <RouterLink class="hover:text-gray-200" to="/projects">{{ $t('nav.projects') }}</RouterLink>
       </li>
+      <!--
       <li>
         <RouterLink class="hover:text-gray-200" to="/results">{{ $t('nav.results') }}</RouterLink>
       </li>
+      -->
       <li>
         <RouterLink class="hover:text-gray-200" to="/experience">{{ $t('nav.experience') }}</RouterLink>
       </li>
@@ -39,7 +41,7 @@
     </button>
 
     <transition name="slide-fade">
-      <ul v-if="isOpen" class="md:hidden bg-blue-600 text-white flex flex-col gap-4 px-6 py-4">
+      <ul v-if="isOpen" class="md:hidden bg-navy text-white flex flex-col gap-4 px-6 py-4">
         <li>
           <RouterLink @click="isOpen = false" to="/">{{ $t('nav.home') }}</RouterLink>
         </li>

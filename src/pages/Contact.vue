@@ -2,6 +2,9 @@
 import { ref } from "vue"
 import emailjs from "emailjs-com"
 import { Mail, Github, Linkedin, Globe } from "lucide-vue-next"
+import { useI18n } from "vue-i18n"
+
+const { t } = useI18n()
 
 // your info
 const contactInfo = {
@@ -27,18 +30,19 @@ const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 const validateForm = () => {
   errors.value = {}
   if (!name.value.trim()) {
-    errors.value.name = "Mező kitöltése kötelező"
+    errors.value.name = t('contact.validation.required')
   }
   if (!email.value.trim()) {
-    errors.value.email = "Mező kitöltése kötelező"
+    errors.value.email = t('contact.validation.required')
   } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
-    errors.value.email = "Érvénytelen email cím"
+    errors.value.email = t('contact.validation.invalidEmail')
   }
   if (!message.value.trim()) {
-    errors.value.message = "Mező kitöltése kötelező"
+    errors.value.message = t('contact.validation.required')
   }
   return Object.keys(errors.value).length === 0
 }
+
 
 // handle submit
 const sendEmail = (e) => {
@@ -59,14 +63,13 @@ const sendEmail = (e) => {
     )
     .then(
       () => {
-        successMessage.value = "Üzenetküldés sikeres 🎉!"
+        successMessage.value = t('contact.success')
         name.value = ""
         email.value = ""
         message.value = ""
       },
       (error) => {
-        successMessage.value = "Üzenetküldési hiba. Kérlek, próbáld újra."
-        console.error(error)
+        successMessage.value = t('contact.error')
       }
     )
 }
@@ -77,9 +80,11 @@ const sendEmail = (e) => {
     <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
       <!-- LEFT: contact info -->
       <div class="flex flex-col justify-center">
-        <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-6">Lépjünk kapcsolatba</h2>
+        <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-6">
+          {{ $t('contact.title') }}
+        </h2>
         <p class="text-gray-600 dark:text-gray-300 mb-8">
-          Küldj egy üzenetet, vagy keress meg a közösségi médiában.
+          {{ $t('contact.subtitle') }}
         </p>
         <ul class="space-y-4 text-gray-700 dark:text-gray-200">
           <li class="flex items-center gap-3">
@@ -104,39 +109,45 @@ const sendEmail = (e) => {
         <form class="space-y-6" @submit="sendEmail">
           <!-- Name -->
           <div>
-            <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Név</label>
+            <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+              {{ $t('contact.form.name') }}
+            </label>
             <input
               v-model="name"
               type="text"
               id="name"
               class="mt-2 w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
-              placeholder="Neved"
+              :placeholder="$t('contact.form.namePlaceholder')"
             />
             <p v-if="errors.name" class="text-red-500 text-sm mt-1">{{ errors.name }}</p>
           </div>
 
           <!-- Email -->
           <div>
-            <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
+            <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+              {{ $t('contact.form.email') }}
+            </label>
             <input
               v-model="email"
               type="email"
               id="email"
               class="mt-2 w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
-              placeholder="you@example.com"
+              :placeholder="$t('contact.form.emailPlaceholder')"
             />
             <p v-if="errors.email" class="text-red-500 text-sm mt-1">{{ errors.email }}</p>
           </div>
 
           <!-- Message -->
           <div>
-            <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Üzenet</label>
+            <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+              {{ $t('contact.form.message') }}
+            </label>
             <textarea
               v-model="message"
               id="message"
               rows="5"
               class="mt-2 w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
-              placeholder="Írd ide az üzeneted..."
+              :placeholder="$t('contact.form.messagePlaceholder')"
             ></textarea>
             <p v-if="errors.message" class="text-red-500 text-sm mt-1">{{ errors.message }}</p>
           </div>
@@ -146,7 +157,7 @@ const sendEmail = (e) => {
             type="submit"
             class="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
           >
-            Üzenet küldése
+            {{ $t('contact.form.submit') }}
           </button>
 
           <!-- Feedback -->

@@ -26,5 +26,47 @@
         "contact": "Vedd fel velem a kapcsolatot",
         "profileAlt": "Profilkép",
         "technologies": "Technológiák"
+    },
+
+    "projects": {
+        "title": "Projektek",
+        "liveDemo": "Demó",
+        "codeBase": "Kódbázis"
+  },
+    
+    "experience": {
+        "title": "Szakmai tapasztalat és tanulmányok",
+        "jobTitle": "Szoftver és alkalmazás fejlesztő",
+        "company": "ITZen Kft",
+        "workPeriod": "2024 - 2025",
+        "jobDescription1": "Részt vettem Laravel és Vue.js alapú webalkalmazások fejlesztésében, ahol backend és frontend feladatokat is elláttam.",
+        "jobDescription2": "Együttműködtem többi fejlesztővel a üzleti követelmények implementálásában, és segítettem a kód minőségének fenntartásában.",
+        "jobDescription3": "Meglévő alkalmazások karbantartása és új funkciók hozzáadása a felhasználói élmény javítása érdekében.",
+        "jobDescription4": "Design tervek alapján weboldalakat és webshopokat fejlesztettem és készítettem WordPress és WooCommerce platformokon.",
+        "educationTitle": "Programtervező informatikus (FOSZK)",
+        "educationPeriod": "2021 - 2024",
+        "educationInstitution": "Neumann János Egyetem",
+        "educationDescription2": "A programtervező informatikus képzés során széles körű ismereteket szereztem a szoftverfejlesztés különböző aspektusaiban, beleértve a programozási nyelveket, adatbázis-kezelést, algoritmusokat és szoftverfejlesztési módszertanokat.",
+        "educationDescription3": "A képzés során sikerült több projektet is megvalósítani csapatmunka keretein belül, ahol a gyakorlati tapasztalat mellett a problémamegoldó képességeimet is fejlesztettem."
+    }, 
+
+    "contact": {
+        "title": "Lépjünk kapcsolatba",
+        "subtitle": "Küldj egy üzenetet, vagy keress meg a közösségi médiában.",
+        "form": {
+            "name": "Név",
+            "namePlaceholder": "Neved",
+            "email": "Email",
+            "emailPlaceholder": "you@example.com",
+            "message": "Üzenet",
+            "messagePlaceholder": "Írd ide az üzeneted...",
+            "submit": "Üzenet küldése"
+        },
+        "validation": {
+            "required": "Mező kitöltése kötelező",
+            "invalidEmail": "Érvénytelen email cím"
+        },
+        "success": "Üzenetküldés sikeres 🎉!",
+        "error": "Üzenetküldési hiba. Kérlek, próbáld újra."
     }
 }

@@ -24,5 +24,47 @@
         "contact": "Get In Touch",
         "profileAlt": "Profile Picture",
         "technologies": "Technologies"
-    }
+    },
+
+    "projects": {
+        "title": "Projects",
+        "liveDemo": "Live Demo",
+        "codeBase": "Code Base"
+    },
+
+    "experience": {
+        "title": "Professional Experience and Education",
+        "jobTitle": "Software and Application Developer",
+        "company": "ITZen (LLC)",
+        "workPeriod": "2024 - 2025",
+        "jobDescription1": "Participated in the development of Laravel and Vue.js based web applications, handling both backend and frontend tasks.",
+        "jobDescription2": "Collaborated with other developers to implement business requirements and helped maintain code quality.",
+        "jobDescription3": "Maintained existing applications and added new features to enhance user experience.",
+        "jobDescription4": "Developed websites and webshops based on design plans using WordPress and WooCommerce platforms.",
+        "educationTitle": "Software Information Technology (Associate Degree)",
+        "educationPeriod": "2021 - 2024",
+        "educationInstitution": "John von Neumann University",
+        "educationDescription2": "During the computer programmer course, I gained extensive knowledge in various aspects of software development, including programming languages, database management, algorithms, and software development methodologies.",
+        "educationDescription3": "Throughout the course, I successfully completed several projects within a team environment, where I developed not only practical experience but also my problem-solving skills."
+    },
+
+    "contact": {
+        "title": "Let's Get In Touch",
+        "subtitle": "Send me a message or reach out on social media.",
+        "form": {
+            "name": "Name",
+            "namePlaceholder": "Your name",
+            "email": "Email",
+            "emailPlaceholder": "you@example.com",
+            "message": "Message",
+            "messagePlaceholder": "Write your message here...",
+            "submit": "Send Message"
+        },
+        "validation": {
+            "required": "This field is required",
+            "invalidEmail": "Invalid email address"
+        },
+    "success": "Message sent successfully 🎉!",
+    "error": "Failed to send message. Please try again."
+  }
 }
