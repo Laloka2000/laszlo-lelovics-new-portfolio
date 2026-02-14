@@ -1,6 +1,6 @@
 <template>
   <nav class="bg-navy text-white shadow-lg px-6 py-4 flex items-center justify-between">
-    <img :src="DevLogo" alt="Developer logo" class="w-16" />
+    <img to="/" :src="DevLogo" alt="Developer logo" class="w-12 h-12" />
 
     <!-- Navigation links -->
     <ul class="hidden md:flex space-x-8">
@@ -48,9 +48,11 @@
         <li>
           <RouterLink @click="isOpen = false" to="/projects">{{ $t('nav.projects') }}</RouterLink>
         </li>
+        <!--
         <li>
           <RouterLink @click="isOpen = false" to="/results">{{ $t('nav.results') }}</RouterLink>
         </li>
+      -->
         <li>
           <RouterLink @click="isOpen = false" to="/experience">{{ $t('nav.experience') }}</RouterLink>
         </li>
@@ -68,7 +70,7 @@
 <script setup>
 import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
-import DevLogo from "../assets/images/web-development.png"
+import DevLogo from "../assets/images/code.png"
 import LanguageSwitcher from './LanguageSwitcher.vue';
 
 const isOpen = ref(false);

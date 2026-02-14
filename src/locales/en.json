@@ -16,7 +16,7 @@
     },
     "home": {
         "greeting": "Hi, I am",
-        "name": "László Lelovics",
+        "name": "Laszlo Lelovics",
         "nameAlt": "👋",
         "description": "I'm a motivated and goal-oriented {role} who loves building modern and user-friendly web applications. I continuously learn and improve to stay up-to-date with the latest technologies and trends.",
         "role": "Software Developer",
@@ -50,21 +50,6 @@
 
     "contact": {
         "title": "Let's Get In Touch",
-        "subtitle": "Send me a message or reach out on social media.",
-        "form": {
-            "name": "Name",
-            "namePlaceholder": "Your name",
-            "email": "Email",
-            "emailPlaceholder": "you@example.com",
-            "message": "Message",
-            "messagePlaceholder": "Write your message here...",
-            "submit": "Send Message"
-        },
-        "validation": {
-            "required": "This field is required",
-            "invalidEmail": "Invalid email address"
-        },
-    "success": "Message sent successfully 🎉!",
-    "error": "Failed to send message. Please try again."
+        "subtitle": "Send me a message or reach out on social media."
   }
 }

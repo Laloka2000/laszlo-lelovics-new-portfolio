@@ -52,21 +52,6 @@
 
     "contact": {
         "title": "Lépjünk kapcsolatba",
-        "subtitle": "Küldj egy üzenetet, vagy keress meg a közösségi médiában.",
-        "form": {
-            "name": "Név",
-            "namePlaceholder": "Neved",
-            "email": "Email",
-            "emailPlaceholder": "you@example.com",
-            "message": "Üzenet",
-            "messagePlaceholder": "Írd ide az üzeneted...",
-            "submit": "Üzenet küldése"
-        },
-        "validation": {
-            "required": "Mező kitöltése kötelező",
-            "invalidEmail": "Érvénytelen email cím"
-        },
-        "success": "Üzenetküldés sikeres 🎉!",
-        "error": "Üzenetküldési hiba. Kérlek, próbáld újra."
+        "subtitle": "Küldj egy üzenetet, vagy keress meg a közösségi médiában."
     }
 }
