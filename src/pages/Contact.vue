@@ -1,6 +1,4 @@
 <script setup>
-import { ref } from "vue"
-import emailjs from "emailjs-com"
 import { Mail, Github, Linkedin, Globe } from "lucide-vue-next"
 import { useI18n } from "vue-i18n"
 
