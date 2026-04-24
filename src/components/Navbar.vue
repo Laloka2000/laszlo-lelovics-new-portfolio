@@ -1,116 +1,71 @@
 <template>
-  <Disclosure as="nav" class="bg-navy text-white shadow-lg" v-slot="{ open }">
-    <div class="w-full px-4 sm:px-6 lg:px-8">
-      <div class="relative flex h-16 items-center justify-between">
-        <!-- Mobile menu button -->
-        <div class="flex items-center md:hidden">
-          <DisclosureButton class="relative inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-            <svg v-if="!open" xmlns="http://www.w3.org/2000/svg" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-            <svg v-else xmlns="http://www.w3.org/2000/svg" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </DisclosureButton>
-        </div>
+  <Disclosure as="nav" class="relative z-20 border-b border-terminal-border bg-terminal-bg" v-slot="{ open, close }">
+    <div class="flex items-center justify-between px-6 py-5 md:px-12">
+      <!-- Brand: ~/laszlo_ with blinking cursor -->
+      <RouterLink to="/" class="text-sm font-bold tracking-[0.05em] text-terminal-accent"
+        :aria-label="$t('nav.logoAlt')">
+        ~/laszlo<span class="cursor-blink">_</span>
+      </RouterLink>
 
-        <!-- Logo - Left side -->
-        <div class="flex items-center">
-          <RouterLink to="/">
-            <img :src="DevLogo" alt="Developer logo" class="h-12 w-12" />
-          </RouterLink>
-        </div>
+      <!-- Desktop links -->
+      <div class="hidden items-center gap-8 md:flex">
+        <RouterLink v-for="item in navItems" :key="item.to" :to="item.to" custom
+          v-slot="{ href, navigate, isActive, isExactActive }">
+          <a :href="href" @click="navigate"
+            class="nav-link text-[13px] tracking-[0.04em] text-terminal-muted transition-colors hover:text-terminal-accent"
+            :class="{
+              active: item.exact ? isExactActive : isActive,
+            }">
+            <template v-if="item.exact ? isExactActive : isActive">&gt;&nbsp;</template>{{ $t(item.key) }}
+          </a>
+        </RouterLink>
 
-        <!-- Desktop navigation links - Right side -->
-        <div class="hidden md:block">
-          <div class="flex items-center space-x-4">
-            <RouterLink 
-              to="/" 
-              class="rounded-md px-3 py-2 text-sm font-medium hover:bg-white/10 hover:text-gray-200"
-              active-class="bg-white/20"
-            >
-              {{ $t('nav.home') }}
-            </RouterLink>
-            <RouterLink 
-              to="/projects" 
-              class="rounded-md px-3 py-2 text-sm font-medium hover:bg-white/10 hover:text-gray-200"
-              active-class="bg-white/20"
-            >
-              {{ $t('nav.projects') }}
-            </RouterLink>
-            <RouterLink 
-              to="/experience" 
-              class="rounded-md px-3 py-2 text-sm font-medium hover:bg-white/10 hover:text-gray-200"
-              active-class="bg-white/20"
-            >
-              {{ $t('nav.experience') }}
-            </RouterLink>
-            <RouterLink 
-              to="/contact" 
-              class="rounded-md px-3 py-2 text-sm font-medium hover:bg-white/10 hover:text-gray-200"
-              active-class="bg-white/20"
-            >
-              {{ $t('nav.contact') }}
-            </RouterLink>
-            <LanguageSwitcher />
-          </div>
-        </div>
+        <LanguageSwitcher class="border-l border-terminal-border pl-5 text-xs text-terminal-muted" />
       </div>
+
+      <!-- Mobile toggle -->
+      <DisclosureButton
+        class="menu-btn flex items-center justify-center border border-terminal-border px-2 py-1 text-terminal-accent transition-colors hover:border-terminal-accent md:hidden"
+        :aria-label="open ? 'Close menu' : 'Open menu'">
+        <span class="text-lg leading-none">{{ open ? '×' : '☰' }}</span>
+      </DisclosureButton>
     </div>
 
-    <!-- Mobile menu panel -->
+    <!-- Mobile panel -->
     <DisclosurePanel class="md:hidden">
-      <div class="space-y-1 px-2 pb-3 pt-2">
-        <DisclosureButton as="div">
-          <RouterLink 
-            to="/" 
-            class="block rounded-md px-3 py-2 text-base font-medium hover:bg-white/10 hover:text-gray-200"
-            active-class="bg-white/20"
-          >
-            {{ $t('nav.home') }}
-          </RouterLink>
-        </DisclosureButton>
-        <DisclosureButton as="div">
-          <RouterLink 
-            to="/projects" 
-            class="block rounded-md px-3 py-2 text-base font-medium hover:bg-white/10 hover:text-gray-200"
-            active-class="bg-white/20"
-          >
-            {{ $t('nav.projects') }}
-          </RouterLink>
-        </DisclosureButton>
-        <DisclosureButton as="div">
-          <RouterLink 
-            to="/experience" 
-            class="block rounded-md px-3 py-2 text-base font-medium hover:bg-white/10 hover:text-gray-200"
-            active-class="bg-white/20"
-          >
-            {{ $t('nav.experience') }}
-          </RouterLink>
-        </DisclosureButton>
-        <DisclosureButton as="div">
-          <RouterLink 
-            to="/contact" 
-            class="block rounded-md px-3 py-2 text-base font-medium hover:bg-white/10 hover:text-gray-200"
-            active-class="bg-white/20"
-          >
-            {{ $t('nav.contact') }}
-          </RouterLink>
-        </DisclosureButton>
-        <div class="px-3 py-2">
-          <LanguageSwitcher />
-        </div>
+      <div class="flex flex-col gap-5 border-t border-terminal-border px-6 py-5">
+        <RouterLink v-for="item in navItems" :key="item.to" :to="item.to" custom
+          v-slot="{ href, navigate, isActive, isExactActive }">
+          <a :href="href" @click="(e) => { navigate(e); close(); }"
+            class="nav-link text-sm tracking-[0.04em] text-terminal-muted transition-colors hover:text-terminal-accent"
+            :class="{
+              active: item.exact ? isExactActive : isActive,
+            }">
+            <template v-if="item.exact ? isExactActive : isActive">&gt;&nbsp;</template>{{ $t(item.key) }}
+          </a>
+        </RouterLink>
+
+        <LanguageSwitcher class="border-t border-terminal-border pt-4 text-xs text-terminal-muted" />
       </div>
     </DisclosurePanel>
   </Disclosure>
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import { RouterLink } from 'vue-router';
-import DevLogo from "../assets/images/code.png"
-import LanguageSwitcher from './LanguageSwitcher.vue';
+import { RouterLink } from 'vue-router'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
+import LanguageSwitcher from './LanguageSwitcher.vue'
 
-const isOpen = ref(false);
+const navItems = [
+  { to: '/', key: 'nav.home', exact: true },
+  { to: '/projects', key: 'nav.projects', exact: false },
+  { to: '/experience', key: 'nav.experience', exact: false },
+  { to: '/contact', key: 'nav.contact', exact: false },
+]
 </script>
+
+<style scoped>
+.nav-link.active {
+  color: var(--color-terminal-accent);
+}
+</style>

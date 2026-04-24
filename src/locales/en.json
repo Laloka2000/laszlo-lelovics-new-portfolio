@@ -1,55 +1,53 @@
 {
-    "nav": {
-        "home": "Home",
-        "projects": "Projects",
-        "results": "My Results",
-        "experience": "Experience",
-        "contact": "Contact",
-        "logoAlt": "Developer logo"
-    },
-    "footer": {
-        "home": "Home",
-        "projects": "Projects",
-        "experience": "Experience",
-        "contact": "Contact",
-        "copyright": "Laszlo Lelovics. All rights reserved."
-    },
-    "home": {
-        "greeting": "Hi, I am",
-        "name": "Laszlo Lelovics",
-        "nameAlt": "👋",
-        "description": "I'm a motivated and goal-oriented {role} who loves building modern and user-friendly web applications. I continuously learn and improve to stay up-to-date with the latest technologies and trends.",
-        "role": "Software Developer",
-        "viewProjects": "View My Projects",
-        "contact": "Get In Touch",
-        "profileAlt": "Profile Picture",
-        "technologies": "Technologies"
-    },
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "results": "Results",
+    "experience": "Experience",
+    "contact": "Contact",
+    "logoAlt": "Laszlo Lelovics — home"
+  },
 
-    "projects": {
-        "title": "Projects",
-        "liveDemo": "Live Demo",
-        "codeBase": "Code Base"
-    },
+  "home": {
+    "firstName": "Laszlo",
+    "lastName": "Lelovics",
+    "roleLabel": "role",
+    "role": "Software Developer",
+    "bioLine1": "Motivated developer building modern web applications.",
+    "bioLine2": "Full-stack: Vue.js, React, Node.js, PHP.",
+    "profileAlt": "Portrait of Laszlo Lelovics"
+  },
 
-    "experience": {
-        "title": "Professional Experience and Education",
-        "jobTitle": "Software and Application Developer",
-        "company": "ITZen (LLC)",
-        "workPeriod": "2024 - 2025",
-        "jobDescription1": "Participated in the development of Laravel and Vue.js based web applications, handling both backend and frontend tasks.",
-        "jobDescription2": "Collaborated with other developers to implement business requirements and helped maintain code quality.",
-        "jobDescription3": "Maintained existing applications and added new features to enhance user experience.",
-        "jobDescription4": "Developed websites and webshops based on design plans using WordPress and WooCommerce platforms.",
-        "educationTitle": "Software Information Technology (Associate Degree)",
-        "educationPeriod": "2021 - 2024",
-        "educationInstitution": "John von Neumann University",
-        "educationDescription2": "During the computer programmer course, I gained extensive knowledge in various aspects of software development, including programming languages, database management, algorithms, and software development methodologies.",
-        "educationDescription3": "Throughout the course, I successfully completed several projects within a team environment, where I developed not only practical experience but also my problem-solving skills."
-    },
+  "projects": {
+    "title": "Projects",
+    "liveDemo": "Demo",
+    "codeBase": "Code"
+  },
 
-    "contact": {
-        "title": "Let's Get In Touch",
-        "subtitle": "Send me a message or reach out on social media."
+  "experience": {
+    "title": "Experience",
+    "jobTitle": "Software & Application Developer",
+    "company": "ITZen LLC",
+    "workPeriod": "2024 – 2025",
+    "jobDescription1": "Laravel + Vue.js web application development",
+    "jobDescription2": "Collaborated with developers on business requirements",
+    "jobDescription3": "Maintained existing applications, added new features",
+    "jobDescription4": "WordPress & WooCommerce websites and webshops",
+    "educationTitle": "Software Information Technology",
+    "educationPeriod": "2021 – 2024",
+    "educationInstitution": "John von Neumann University",
+    "educationPoint1": "Associate Degree — Computer Programming",
+    "educationPoint2": "Algorithms, databases, software dev methodologies",
+    "educationPoint3": "Multiple team projects, problem-solving in practice"
+  },
+
+  "contact": {
+    "kicker": "say hello",
+    "title": "Let's get in touch",
+    "subtitle": "Send me a message or reach out on social media."
+  },
+
+  "results": {
+    "comingSoon": "Coming soon."
   }
 }

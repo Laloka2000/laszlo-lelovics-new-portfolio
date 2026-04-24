@@ -1,57 +1,53 @@
 {
-    "nav": {
-        "home": "Kezdőlap",
-        "projects": "Projektek",
-        "results": "Eredményeim",
-        "experience": "Tapasztalat",
-        "contact": "Kapcsolat",
-        "logoAlt": "Fejlesztői logó"
-    },
-
-    "footer": {
-        "home": "Kezdőlap",
-        "projects": "Projektek",
-        "experience": "Tapasztalat",
-        "contact": "Kapcsolat",
-        "copyright": "Lelovics László. Minden jog fenntartva."
-    },
-
-    "home": {
-        "greeting": "Üdv,",
-        "name": "Lelovics László",
-        "nameAlt": "vagyok👋",
-        "description": "Motivált és céltudatos {role} vagyok, aki szeret modern és felhasználóbarát webalkalmazásokat építeni. Folyamatosan tanulok és fejlődök, hogy naprakész maradjak a legújabb technológiákkal és trendekkel.",
-        "role": "Szoftverfejlesztő",
-        "viewProjects": "Tekintsd meg a projektjeim",
-        "contact": "Vedd fel velem a kapcsolatot",
-        "profileAlt": "Profilkép",
-        "technologies": "Technológiák"
-    },
-
-    "projects": {
-        "title": "Projektek",
-        "liveDemo": "Demó",
-        "codeBase": "Kódbázis"
+  "nav": {
+    "home": "Kezdőlap",
+    "projects": "Projektek",
+    "results": "Eredmények",
+    "experience": "Tapasztalat",
+    "contact": "Kapcsolat",
+    "logoAlt": "Lelovics László — kezdőlap"
   },
-    
-    "experience": {
-        "title": "Szakmai tapasztalat és tanulmányok",
-        "jobTitle": "Szoftver és alkalmazás fejlesztő",
-        "company": "ITZen Kft",
-        "workPeriod": "2024 - 2025",
-        "jobDescription1": "Részt vettem Laravel és Vue.js alapú webalkalmazások fejlesztésében, ahol backend és frontend feladatokat is elláttam.",
-        "jobDescription2": "Együttműködtem többi fejlesztővel a üzleti követelmények implementálásában, és segítettem a kód minőségének fenntartásában.",
-        "jobDescription3": "Meglévő alkalmazások karbantartása és új funkciók hozzáadása a felhasználói élmény javítása érdekében.",
-        "jobDescription4": "Design tervek alapján weboldalakat és webshopokat fejlesztettem és készítettem WordPress és WooCommerce platformokon.",
-        "educationTitle": "Programtervező informatikus (FOSZK)",
-        "educationPeriod": "2021 - 2024",
-        "educationInstitution": "Neumann János Egyetem",
-        "educationDescription2": "A programtervező informatikus képzés során széles körű ismereteket szereztem a szoftverfejlesztés különböző aspektusaiban, beleértve a programozási nyelveket, adatbázis-kezelést, algoritmusokat és szoftverfejlesztési módszertanokat.",
-        "educationDescription3": "A képzés során sikerült több projektet is megvalósítani csapatmunka keretein belül, ahol a gyakorlati tapasztalat mellett a problémamegoldó képességeimet is fejlesztettem."
-    }, 
 
-    "contact": {
-        "title": "Lépjünk kapcsolatba",
-        "subtitle": "Küldj egy üzenetet, vagy keress meg a közösségi médiában."
-    }
+  "home": {
+    "firstName": "Lelovics",
+    "lastName": "László",
+    "roleLabel": "szerep",
+    "role": "Szoftverfejlesztő",
+    "bioLine1": "Motivált fejlesztő, aki modern webalkalmazásokat épít.",
+    "bioLine2": "Full-stack: Vue.js, React, Node.js, PHP.",
+    "profileAlt": "Lelovics László portré"
+  },
+
+  "projects": {
+    "title": "Projektek",
+    "liveDemo": "Demó",
+    "codeBase": "Kód"
+  },
+
+  "experience": {
+    "title": "Tapasztalat",
+    "jobTitle": "Szoftver- és alkalmazásfejlesztő",
+    "company": "ITZen Kft.",
+    "workPeriod": "2024 – 2025",
+    "jobDescription1": "Laravel + Vue.js webalkalmazások fejlesztése",
+    "jobDescription2": "Együttműködés fejlesztőkkel az üzleti követelmények alapján",
+    "jobDescription3": "Meglévő alkalmazások karbantartása, új funkciók fejlesztése",
+    "jobDescription4": "WordPress és WooCommerce weboldalak, webshopok",
+    "educationTitle": "Programtervező informatikus",
+    "educationPeriod": "2021 – 2024",
+    "educationInstitution": "Neumann János Egyetem",
+    "educationPoint1": "Felsőfokú szakképzés — programozó",
+    "educationPoint2": "Algoritmusok, adatbázisok, szoftverfejlesztési módszertanok",
+    "educationPoint3": "Több csapatprojekt, problémamegoldás gyakorlatban"
+  },
+
+  "contact": {
+    "kicker": "üdv",
+    "title": "Lépjünk kapcsolatba",
+    "subtitle": "Írj egy üzenetet, vagy keress a közösségi médiában."
+  },
+
+  "results": {
+    "comingSoon": "Hamarosan."
+  }
 }
