@@ -1,45 +1,52 @@
-import {ref, onMounted, onBeforeUnmount} from 'vue';
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 
+/**
+ * Mouse-follow green glow. Mount once in App.vue.
+ * Usage:
+ *   const { glowRef, visible } = useCursorGlow()
+ *   <div ref="glowRef" class="cursor-glow" :class="{ visible }" />
+ */
 export function useCursorGlow() {
-    const cursorGlowRef = ref(null);
-    const visibleEl = ref(false);
+  const glowRef = ref(null)
+  const visible = ref(false)
 
-    let rafId = null;
-    let mouseTx = 0;
-    let mouseTy = 0;
+  let rafId = null
+  let tx = 0
+  let ty = 0
 
-    const onMouseMove = (e) => {
-        mouseTx = e.clientX;
-        mouseTy = e.clientY;
-        if (!visibleEl.value) visibleEl.value = true;
-        if (rafId) return;
-        rafId = requestAnimationFrame(() => {
-            if (cursorGlowRef.value) {
-                cursorGlowRef.value.style.transform = `translate(${mouseTx}px, ${mouseTy}px translate(-50%, -50%))`;
-            }
-            rafId = null;
-        })
-    }
-
-    const onMouseLeave = () => {
-        visibleEl.value = false;
-    }
-
-    const onMouseTouch = () => {
-        if (cursorGlowRef.value) cursorGlowRef.value.style.display = 'none';
-    }
-
-    onMounted(() => {
-        window.addEventListener('mousemove', onMouseMove, {passive: true});
-        window.addEventListener('mouseleave', onMouseLeave);
-        window.addEventListener('touchstart', onMouseTouch, {passive: true});
+  const onMove = (e) => {
+    tx = e.clientX
+    ty = e.clientY
+    if (!visible.value) visible.value = true
+    if (rafId) return
+    rafId = requestAnimationFrame(() => {
+      if (glowRef.value) {
+        glowRef.value.style.transform = `translate(${tx}px, ${ty}px) translate(-50%, -50%)`
+      }
+      rafId = null
     })
+  }
 
-    onBeforeUnmount(() => {
-        window.removeEventListener('mousemove', onMouseMove);
-        window.removeEventListener('mouseleave', onMouseLeave);
-        if (rafId) cancelAnimationFrame(rafId);
-    })
+  const onLeave = () => {
+    visible.value = false
+  }
 
-    return {cursorGlowRef, visibleEl}
+  // Once a touch happens, hide the glow permanently — it's a desktop affordance.
+  const onTouch = () => {
+    if (glowRef.value) glowRef.value.style.display = 'none'
+  }
+
+  onMounted(() => {
+    window.addEventListener('mousemove', onMove, { passive: true })
+    window.addEventListener('mouseleave', onLeave)
+    window.addEventListener('touchstart', onTouch, { once: true, passive: true })
+  })
+
+  onBeforeUnmount(() => {
+    window.removeEventListener('mousemove', onMove)
+    window.removeEventListener('mouseleave', onLeave)
+    if (rafId) cancelAnimationFrame(rafId)
+  })
+
+  return { glowRef, visible }
 }

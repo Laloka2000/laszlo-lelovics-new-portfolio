@@ -1,113 +1,235 @@
 <template>
-    <section class="min-h-[calc(67vh-6rem)] bg-gray-50 dark:bg-gray-900 py-16">
-        <div class="max-w-6xl mx-auto px-6">
-            <!-- Heading -->
-            <h2 class="text-4xl font-bold text-center text-gray-800 dark:text-white mb-12" v-motion
-                :initial="{ opacity: 0, y: -20 }" :enter="{ opacity: 1, y: 0, transition: { duration: 0.8 } }">
-                {{ $t('projects.title') }}
-            </h2>
+  <section class="page">
+    <header
+      class="page-heading"
+      v-motion
+      :initial="{ opacity: 0, y: 24 }"
+      :enter="{ opacity: 1, y: 0, transition: { duration: 500, delay: 0 } }"
+    >
+      <div class="kicker">$ ls ./projects/</div>
+      <h2>{{ $t('projects.title') }}</h2>
+    </header>
 
-            <!-- Projects Grid -->
-            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                <div v-for="(project, index) in projects" :key="index"
-                    class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 flex flex-col justify-between hover:shadow-2xl transition"
-                    v-motion :initial="{ opacity: 0, y: 40 }"
-                    :enter="{ opacity: 1, y: 0, transition: { duration: 0.6, delay: index * 0.2 } }">
-                    <!-- Title -->
-                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-3">
-                        {{ project.title[$i18n.locale] }}
-                    </h3>
+    <div class="projects-list">
+      <article
+        v-for="(p, i) in projects"
+        :key="i"
+        class="proj-row"
+        v-motion
+        :initial="{ opacity: 0, y: 20 }"
+        :enter="{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 500, delay: 100 + i * 100 },
+        }"
+      >
+        <span class="proj-num">{{ String(i + 1).padStart(2, '0') }}</span>
 
-                    <!-- Description -->
-                    <p class="text-gray-600 dark:text-gray-300 mb-4">
-                        {{ project.description[$i18n.locale] }}
-                    </p>
-
-                    <!-- Tech Stack -->
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span v-for="(tech, idx) in project.tech" :key="idx"
-                            class="px-3 py-1 bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200 text-sm rounded-full">
-                            {{ tech }}
-                        </span>
-                    </div>
-
-                    <!-- Buttons -->
-                    <div class="flex gap-4 mt-auto">
-                        <a v-if="project.demoLink" :href="project.demoLink" target="_blank"
-                            class="flex-1 text-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
-                            {{ $t('projects.liveDemo') }}
-                        </a>
-                        <a :href="project.codeLink" target="_blank"
-                            class="flex-1 text-center px-4 py-2 border border-gray-600 text-gray-600 dark:border-gray-400 dark:text-gray-300 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-700 transition">
-                            {{ $t('projects.codeBase') }}
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <div class="proj-content">
+          <h3 class="proj-title">{{ p.title[$i18n.locale] }}</h3>
+          <p class="proj-desc">{{ p.description[$i18n.locale] }}</p>
+          <div class="proj-tech">
+            <span v-for="t in p.tech" :key="t" class="t">{{ t }}</span>
+          </div>
         </div>
-    </section>
+
+        <div class="proj-links">
+          <a
+            v-if="p.demoLink"
+            :href="p.demoLink"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {{ $t('projects.liveDemo') }} ↗
+          </a>
+          <span v-else class="disabled">{{ $t('projects.liveDemo') }} ↗</span>
+          <a :href="p.codeLink" target="_blank" rel="noopener noreferrer">
+            {{ $t('projects.codeBase') }} ↗
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
 </template>
 
 <script setup>
 import { ref } from 'vue'
 
 const projects = ref([
-    {
-        title: {
-            hu: 'Jegyzet kezelő alkalmazás',
-            en: 'Note Management App'
-        },
-        description: {
-            hu: 'Egy egyszerű jegyzet alkalmazás, amely lehetővé teszi a felhasználók számára, hogy létrehozzanak, szerkesszenek és töröljenek jegyzeteket egy felhasználóbarát felületen.',
-            en: 'A simple note-taking app that allows users to create, edit, and delete notes with a user-friendly interface.'
-        },
-        tech: ['React.js', 'JavaScript', 'Vercel'],
-        demoLink: 'https://keeperapp-beta.vercel.app/',
-        codeLink: 'https://github.com/Laloka2000/keeperapp'
+  {
+    title: {
+      en: 'Note Management App',
+      hu: 'Jegyzetkezelő alkalmazás',
     },
-    {
-        title: {
-            hu: 'Kockajáték',
-            en: 'Dice Game'
-        },
-        description: {
-            hu: 'Egy egyszerű kockajáték, ahol a felhasználók dobhatnak két kockával, és a cél a lehető legmagasabb pontszám elérése.',
-            en: 'A simple dice game where users can roll two dice, with the goal of achieving the highest possible score.'
-        },
-        tech: ['JavaScript', 'HTML5', 'CSS3'],
-        demoLink: 'https://github.com/Laloka2000/PigGame',
-        codeLink: 'https://github.com/Laloka2000/PigGame'
+    description: {
+      en: 'Create, edit, and delete notes with a clean user-friendly interface.',
+      hu: 'Jegyzetek létrehozása, szerkesztése és törlése letisztult felületen.',
     },
-    {
-        title: {
-            hu: 'Időjárás alkalmazás',
-            en: 'Weather App'
-        },
-        description: {
-            hu: 'Egy időjárás alkalmazás, amely valós idejű időjárási adatokat szolgáltat a felhasználók számára egy letisztult és modern felületen.',
-            en: 'A weather application that provides real-time weather data to users through a clean and modern interface.'
-        },
-        tech: ['Vue.js', 'OpenWeatherMap API', 'Netlify'],
-        demoLink: 'https://vue-weather-app-3aedb.netlify.app/',
-        codeLink: 'https://github.com/Laloka2000/weather-app'
+    tech: ['React.js', 'JavaScript', 'Vercel'],
+    demoLink: 'https://keeperapp-beta.vercel.app/',
+    codeLink: 'https://github.com/Laloka2000/keeperapp',
+  },
+  {
+    title: {
+      en: 'Dice Game',
+      hu: 'Kockajáték',
     },
-    {
-        title: {
-            hu: 'Technológiai hírek telegram bot',
-            en: 'Tech News Telegram Bot'
-        },
-        description: {
-            hu: 'RSS feedekből olvassa ki a legújabb cikkeket Informatikai jellegű témákban és küldi el a telegramon keresztül a felhasználónak. A megvalósításhoz a Telegram Bot API szolgáltatást használtam.',
-            en: 'Reads the latest articles from RSS feeds on IT-related topics and sends them to users via Telegram. Built using the Telegram Bot API.'
-        },
-        tech: ['Node.js', 'SQLite', 'Railway', 'JavaScript'],
-        codeLink: 'https://github.com/Laloka2000/tech-news-bot'
-    }
+    description: {
+      en: 'Roll two dice — first to 100 points wins. Simple, sharp JS game.',
+      hu: 'Dobj két kockával — aki először eléri a 100 pontot, nyer. Egyszerű JS játék.',
+    },
+    tech: ['JavaScript', 'HTML5', 'CSS3'],
+    demoLink: 'https://github.com/Laloka2000/PigGame',
+    codeLink: 'https://github.com/Laloka2000/PigGame',
+  },
+  {
+    title: {
+      en: 'Weather App',
+      hu: 'Időjárás alkalmazás',
+    },
+    description: {
+      en: 'Real-time weather data through a clean and modern interface.',
+      hu: 'Valós idejű időjárási adatok modern és letisztult felületen.',
+    },
+    tech: ['Vue.js', 'OpenWeatherMap API', 'Netlify'],
+    demoLink: 'https://vue-weather-app-3aedb.netlify.app/',
+    codeLink: 'https://github.com/Laloka2000/weather-app',
+  },
+  {
+    title: {
+      en: 'Tech News Telegram Bot',
+      hu: 'Technológiai hírek Telegram bot',
+    },
+    description: {
+      en: 'Delivers latest IT articles from RSS feeds directly via Telegram.',
+      hu: 'RSS feedekből olvassa ki a legújabb IT cikkeket és küldi el Telegramon.',
+    },
+    tech: ['Node.js', 'SQLite', 'Railway'],
+    demoLink: null,
+    codeLink: 'https://github.com/Laloka2000/tech-news-bot',
+  },
 ])
 </script>
 
-<style>
-section {
-    padding: 2rem;
+<style scoped>
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 56px 48px 96px;
+}
+
+.page-heading {
+  margin-bottom: 40px;
+}
+.kicker {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--color-terminal-accent);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.page-heading h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--color-terminal-fg);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+}
+.proj-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--color-terminal-border);
+  transition: padding-left 0.2s ease;
+}
+.proj-row:hover {
+  padding-left: 12px;
+}
+.proj-num {
+  color: var(--color-terminal-accent);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  opacity: 0.7;
+  min-width: 32px;
+  padding-top: 4px;
+  flex-shrink: 0;
+}
+.proj-content {
+  flex: 1;
+  min-width: 0;
+}
+.proj-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-terminal-fg);
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+.proj-desc {
+  color: var(--color-terminal-muted);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.proj-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.proj-tech .t {
+  padding: 3px 10px;
+  border: 1px solid var(--color-terminal-border);
+  color: var(--color-terminal-muted);
+  font-size: 12px;
+}
+.proj-links {
+  display: flex;
+  gap: 16px;
+  padding-top: 4px;
+  flex-shrink: 0;
+}
+.proj-links a {
+  font-size: 12px;
+  color: var(--color-terminal-muted);
+  border-bottom: 1px solid var(--color-terminal-border);
+  padding-bottom: 1px;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+.proj-links a:hover {
+  color: var(--color-terminal-accent);
+  border-bottom-color: var(--color-terminal-accent);
+}
+.proj-links .disabled {
+  font-size: 12px;
+  opacity: 0.25;
+  color: var(--color-terminal-muted);
+  border-bottom: 1px solid var(--color-terminal-border);
+  padding-bottom: 1px;
+  cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 48px 24px 80px;
+  }
+  .proj-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .proj-row:hover {
+    padding-left: 8px;
+  }
+  .proj-links {
+    padding-top: 0;
+  }
 }
 </style>

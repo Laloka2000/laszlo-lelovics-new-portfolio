@@ -1,23 +1,26 @@
-/** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{vue,js,ts,jsx,tsx}",
-  ],
+  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
-        'navy': {
-          DEFAULT: '#1e3a5f',
-          light: '#2a5080',
-          dark: '#152944',
+        terminal: {
+          bg: '#000000',
+          fg: '#e8ffe8',
+          muted: 'rgba(232, 255, 232, 0.45)',
+          accent: '#00ff88',
+          'accent-dim': 'rgba(0, 255, 136, 0.08)',
+          border: 'rgba(0, 255, 136, 0.12)',
         },
-        'slate-pro': {
-          DEFAULT: '#2c3e50',
-          light: '#34495e',
-          dark: '#1a252f',
-        }
-      }
+      },
+      fontFamily: {
+        mono: [
+          '"JetBrains Mono"',
+          'ui-monospace',
+          'SFMono-Regular',
+          'Menlo',
+          'monospace',
+        ],
+      },
     },
   },
   plugins: [],
