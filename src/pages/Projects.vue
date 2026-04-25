@@ -1,28 +1,17 @@
 <template>
   <section class="page">
-    <header
-      class="page-heading"
-      v-motion
-      :initial="{ opacity: 0, y: 24 }"
-      :enter="{ opacity: 1, y: 0, transition: { duration: 500, delay: 0 } }"
-    >
+    <header class="page-heading" v-motion :initial="{ opacity: 0, y: 24 }"
+      :enter="{ opacity: 1, y: 0, transition: { duration: 500, delay: 0 } }">
       <div class="kicker">$ ls ./projects/</div>
       <h2>{{ $t('projects.title') }}</h2>
     </header>
 
     <div class="projects-list">
-      <article
-        v-for="(p, i) in projects"
-        :key="i"
-        class="proj-row"
-        v-motion
-        :initial="{ opacity: 0, y: 20 }"
-        :enter="{
-          opacity: 1,
-          y: 0,
-          transition: { duration: 500, delay: 100 + i * 100 },
-        }"
-      >
+      <article v-for="(p, i) in projects" :key="i" class="proj-row" v-motion :initial="{ opacity: 0, y: 20 }" :enter="{
+        opacity: 1,
+        y: 0,
+        transition: { duration: 500, delay: 100 + i * 100 },
+      }">
         <span class="proj-num">{{ String(i + 1).padStart(2, '0') }}</span>
 
         <div class="proj-content">
@@ -34,12 +23,7 @@
         </div>
 
         <div class="proj-links">
-          <a
-            v-if="p.demoLink"
-            :href="p.demoLink"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a v-if="p.demoLink" :href="p.demoLink" target="_blank" rel="noopener noreferrer">
             {{ $t('projects.liveDemo') }} ↗
           </a>
           <span v-else class="disabled">{{ $t('projects.liveDemo') }} ↗</span>
@@ -71,29 +55,29 @@ const projects = ref([
   },
   {
     title: {
-      en: 'Dice Game',
-      hu: 'Kockajáték',
+      en: 'User Configuration Manager',
+      hu: 'Felhasználói konfiguráció kezelő',
     },
     description: {
-      en: 'Roll two dice — first to 100 points wins. Simple, sharp JS game.',
-      hu: 'Dobj két kockával — aki először eléri a 100 pontot, nyer. Egyszerű JS játék.',
+      en: 'A lightweight Python utility designed to manage application settings using a dictionary-based storage. ',
+      hu: 'Egy könnyű Python segédprogram, amely alkalmazásbeállítások kezelésére szolgál szótár-alapú tárhely használatával.',
     },
-    tech: ['JavaScript', 'HTML5', 'CSS3'],
-    demoLink: 'https://github.com/Laloka2000/PigGame',
-    codeLink: 'https://github.com/Laloka2000/PigGame',
+    tech: ['Python'],
+    demoLink: null,
+    codeLink: 'https://github.com/Laloka2000/user-configuration-manager',
   },
   {
     title: {
-      en: 'Weather App',
-      hu: 'Időjárás alkalmazás',
+      en: 'Your little library',
+      hu: 'A kis könyvtárad',
     },
     description: {
-      en: 'Real-time weather data through a clean and modern interface.',
-      hu: 'Valós idejű időjárási adatok modern és letisztult felületen.',
+      en: 'A personal book collection manager with an easy-to-use interface. Allows adding, editing, and deleting books, with user registration/login and book cover display.',
+      hu: 'Személyes könyvgyűjtemény kezelő könnyen használható felülettel, amely lehetővé teszi könyvek hozzáadását, szerkesztését és törlését. Felhasználó regisztrációval és bejelentkezéssel, valamint könyvborítók megjelenítésével.',
     },
-    tech: ['Vue.js', 'OpenWeatherMap API', 'Netlify'],
-    demoLink: 'https://vue-weather-app-3aedb.netlify.app/',
-    codeLink: 'https://github.com/Laloka2000/weather-app',
+    tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
+    demoLink: 'https://litte-library.great-site.net',
+    codeLink: 'https://github.com/Laloka2000/your-little-library',
   },
   {
     title: {
@@ -121,6 +105,7 @@ const projects = ref([
 .page-heading {
   margin-bottom: 40px;
 }
+
 .kicker {
   font-size: 10px;
   letter-spacing: 0.15em;
@@ -129,6 +114,7 @@ const projects = ref([
   margin-bottom: 12px;
   font-weight: 600;
 }
+
 .page-heading h2 {
   font-size: 40px;
   font-weight: 700;
@@ -141,6 +127,7 @@ const projects = ref([
   display: flex;
   flex-direction: column;
 }
+
 .proj-row {
   display: flex;
   align-items: flex-start;
@@ -149,9 +136,11 @@ const projects = ref([
   border-bottom: 1px solid var(--color-terminal-border);
   transition: padding-left 0.2s ease;
 }
+
 .proj-row:hover {
   padding-left: 12px;
 }
+
 .proj-num {
   color: var(--color-terminal-accent);
   font-size: 12px;
@@ -161,10 +150,12 @@ const projects = ref([
   padding-top: 4px;
   flex-shrink: 0;
 }
+
 .proj-content {
   flex: 1;
   min-width: 0;
 }
+
 .proj-title {
   font-size: 20px;
   font-weight: 600;
@@ -172,29 +163,34 @@ const projects = ref([
   letter-spacing: -0.01em;
   margin-bottom: 8px;
 }
+
 .proj-desc {
   color: var(--color-terminal-muted);
   font-size: 14px;
   line-height: 1.6;
   margin-bottom: 12px;
 }
+
 .proj-tech {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
+
 .proj-tech .t {
   padding: 3px 10px;
   border: 1px solid var(--color-terminal-border);
   color: var(--color-terminal-muted);
   font-size: 12px;
 }
+
 .proj-links {
   display: flex;
   gap: 16px;
   padding-top: 4px;
   flex-shrink: 0;
 }
+
 .proj-links a {
   font-size: 12px;
   color: var(--color-terminal-muted);
@@ -204,10 +200,12 @@ const projects = ref([
     color 0.2s ease,
     border-color 0.2s ease;
 }
+
 .proj-links a:hover {
   color: var(--color-terminal-accent);
   border-bottom-color: var(--color-terminal-accent);
 }
+
 .proj-links .disabled {
   font-size: 12px;
   opacity: 0.25;
@@ -221,13 +219,16 @@ const projects = ref([
   .page {
     padding: 48px 24px 80px;
   }
+
   .proj-row {
     flex-direction: column;
     gap: 16px;
   }
+
   .proj-row:hover {
     padding-left: 8px;
   }
+
   .proj-links {
     padding-top: 0;
   }

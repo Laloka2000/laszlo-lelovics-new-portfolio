@@ -1,23 +1,15 @@
 <template>
   <section class="page">
-    <header
-      class="page-heading"
-      v-motion
-      :initial="{ opacity: 0, y: 24 }"
-      :enter="{ opacity: 1, y: 0, transition: { duration: 500, delay: 0 } }"
-    >
+    <header class="page-heading" v-motion :initial="{ opacity: 0, y: 24 }"
+      :enter="{ opacity: 1, y: 0, transition: { duration: 500, delay: 0 } }">
       <div class="kicker">$ cat ./experience.md</div>
       <h2>{{ $t('experience.title') }}</h2>
     </header>
 
     <div class="exp-list">
       <!-- Work -->
-      <article
-        class="exp-item"
-        v-motion
-        :initial="{ opacity: 0, y: 20 }"
-        :enter="{ opacity: 1, y: 0, transition: { duration: 500, delay: 120 } }"
-      >
+      <article class="exp-item" v-motion :initial="{ opacity: 0, y: 20 }"
+        :enter="{ opacity: 1, y: 0, transition: { duration: 500, delay: 120 } }">
         <div class="exp-meta">
           <div class="exp-period">{{ $t('experience.workPeriod') }}</div>
           <div class="exp-org">{{ $t('experience.company') }}</div>
@@ -34,12 +26,8 @@
       </article>
 
       <!-- Education -->
-      <article
-        class="exp-item"
-        v-motion
-        :initial="{ opacity: 0, y: 20 }"
-        :enter="{ opacity: 1, y: 0, transition: { duration: 500, delay: 240 } }"
-      >
+      <article class="exp-item" v-motion :initial="{ opacity: 0, y: 20 }"
+        :enter="{ opacity: 1, y: 0, transition: { duration: 500, delay: 240 } }">
         <div class="exp-meta">
           <div class="exp-period">{{ $t('experience.educationPeriod') }}</div>
           <div class="exp-org">{{ $t('experience.educationInstitution') }}</div>
@@ -58,7 +46,6 @@
 </template>
 
 <script setup>
-// Presentational; all copy lives in locales.
 </script>
 
 <style scoped>
@@ -71,6 +58,7 @@
 .page-heading {
   margin-bottom: 40px;
 }
+
 .kicker {
   font-size: 10px;
   letter-spacing: 0.15em;
@@ -79,6 +67,7 @@
   margin-bottom: 12px;
   font-weight: 600;
 }
+
 .page-heading h2 {
   font-size: 40px;
   font-weight: 700;
@@ -100,6 +89,7 @@
   margin-bottom: 48px;
   border-bottom: 1px solid var(--color-terminal-border);
 }
+
 .exp-item:last-child {
   padding-bottom: 0;
   margin-bottom: 0;
@@ -112,6 +102,7 @@
   letter-spacing: 0.06em;
   margin-bottom: 4px;
 }
+
 .exp-org {
   color: var(--color-terminal-muted);
   font-size: 12px;
@@ -135,6 +126,7 @@
   flex-direction: column;
   gap: 8px;
 }
+
 .exp-points li {
   color: var(--color-terminal-muted);
   font-size: 14px;
@@ -143,6 +135,7 @@
   gap: 12px;
   align-items: flex-start;
 }
+
 .exp-points li::before {
   content: '—';
   color: var(--color-terminal-accent);
@@ -154,12 +147,14 @@
   .page {
     padding: 48px 24px 80px;
   }
+
   .exp-item {
     grid-template-columns: 1fr;
     gap: 16px;
     padding-bottom: 32px;
     margin-bottom: 32px;
   }
+
   .exp-org {
     margin-top: 4px;
   }

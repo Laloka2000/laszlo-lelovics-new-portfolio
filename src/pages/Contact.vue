@@ -1,30 +1,16 @@
 <template>
   <section class="page">
-    <header
-      class="page-heading"
-      v-motion
-      :initial="{ opacity: 0, y: 24 }"
-      :enter="{ opacity: 1, y: 0, transition: { duration: 500, delay: 0 } }"
-    >
+    <header class="page-heading" v-motion :initial="{ opacity: 0, y: 24 }"
+      :enter="{ opacity: 1, y: 0, transition: { duration: 500, delay: 0 } }">
       <div class="kicker">$ echo "{{ $t('contact.kicker') }}"</div>
       <h2>{{ $t('contact.title') }}</h2>
       <p class="subtitle">{{ $t('contact.subtitle') }}</p>
     </header>
 
-    <div
-      class="contact-list"
-      v-motion
-      :initial="{ opacity: 0, y: 20 }"
-      :enter="{ opacity: 1, y: 0, transition: { duration: 500, delay: 150 } }"
-    >
-      <a
-        v-for="(link, i) in links"
-        :key="link.label"
-        :href="link.href"
-        :target="link.external ? '_blank' : undefined"
-        :rel="link.external ? 'noopener noreferrer' : undefined"
-        class="contact-row"
-      >
+    <div class="contact-list" v-motion :initial="{ opacity: 0, y: 20 }"
+      :enter="{ opacity: 1, y: 0, transition: { duration: 500, delay: 150 } }">
+      <a v-for="(link, i) in links" :key="link.label" :href="link.href" :target="link.external ? '_blank' : undefined"
+        :rel="link.external ? 'noopener noreferrer' : undefined" class="contact-row">
         <span class="contact-label">{{ link.label }}</span>
         <span class="contact-value">
           {{ link.value }}
@@ -68,6 +54,7 @@ const links = [
 .page-heading {
   margin-bottom: 16px;
 }
+
 .kicker {
   font-size: 10px;
   letter-spacing: 0.15em;
@@ -76,6 +63,7 @@ const links = [
   margin-bottom: 12px;
   font-weight: 600;
 }
+
 .page-heading h2 {
   font-size: 40px;
   font-weight: 700;
@@ -84,6 +72,7 @@ const links = [
   line-height: 1;
   margin-bottom: 16px;
 }
+
 .subtitle {
   color: var(--color-terminal-muted);
   font-size: 15px;
@@ -107,9 +96,11 @@ const links = [
     padding-left 0.2s ease,
     color 0.2s ease;
 }
+
 .contact-row:hover {
   padding-left: 12px;
 }
+
 .contact-label {
   font-size: 12px;
   letter-spacing: 0.1em;
@@ -117,6 +108,7 @@ const links = [
   text-transform: uppercase;
   flex-shrink: 0;
 }
+
 .contact-value {
   font-size: 14px;
   color: var(--color-terminal-muted);
@@ -124,10 +116,12 @@ const links = [
   word-break: break-all;
   transition: color 0.2s ease;
 }
+
 .arrow {
   color: var(--color-terminal-accent);
   margin-left: 4px;
 }
+
 .contact-row:hover .contact-value {
   color: var(--color-terminal-fg);
 }
@@ -136,11 +130,13 @@ const links = [
   .page {
     padding: 48px 24px 80px;
   }
+
   .contact-row {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
   }
+
   .contact-value {
     text-align: left;
   }

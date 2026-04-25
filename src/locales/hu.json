@@ -49,5 +49,11 @@
 
   "results": {
     "comingSoon": "Hamarosan."
+  },
+
+  "footer" : {
+    "available": "Elérhető munkára",
+    "builtWith": "Vue 3 + Tailwind-del készült",
+    "navLabel": "Footer navigáció"
   }
 }

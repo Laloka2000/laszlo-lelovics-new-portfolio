@@ -49,5 +49,11 @@
 
   "results": {
     "comingSoon": "Coming soon."
+  },
+
+  "footer": {
+    "available": "Available for work",
+    "builtWith": "Built with Vue 3 + Tailwind",
+    "navLabel": "Footer navigation"
   }
 }

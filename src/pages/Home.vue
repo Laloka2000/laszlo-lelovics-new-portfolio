@@ -4,55 +4,35 @@
       <!-- Left column: hero text -->
       <div class="home-hero">
         <!-- $ whoami -->
-        <div
-          class="prompt"
-          v-motion
-          :initial="{ opacity: 0, y: 24 }"
-          :enter="{ opacity: 1, y: 0, transition: { duration: 600, delay: 0 } }"
-        >
+        <div class="prompt" v-motion :initial="{ opacity: 0, y: 24 }"
+          :enter="{ opacity: 1, y: 0, transition: { duration: 600, delay: 0 } }">
           <span class="sigil">$</span> whoami
         </div>
 
         <!-- Name -->
-        <h1
-          class="name"
-          v-motion
-          :initial="{ opacity: 0, y: 24 }"
-          :enter="{ opacity: 1, y: 0, transition: { duration: 600, delay: 100 } }"
-        >
+        <h1 class="name" v-motion :initial="{ opacity: 0, y: 24 }"
+          :enter="{ opacity: 1, y: 0, transition: { duration: 600, delay: 100 } }">
           <span class="first">{{ $t('home.firstName') }}</span>
           <span class="last">{{ $t('home.lastName') }}</span>
         </h1>
 
         <!-- // role: Software Developer -->
-        <div
-          class="role"
-          v-motion
-          :initial="{ opacity: 0, y: 24 }"
-          :enter="{ opacity: 1, y: 0, transition: { duration: 600, delay: 200 } }"
-        >
+        <div class="role" v-motion :initial="{ opacity: 0, y: 24 }"
+          :enter="{ opacity: 1, y: 0, transition: { duration: 600, delay: 200 } }">
           <span class="sigil">// </span>{{ $t('home.roleLabel') }}:
           {{ $t('home.role') }}
         </div>
 
         <!-- Bio -->
-        <div
-          class="bio"
-          v-motion
-          :initial="{ opacity: 0, y: 24 }"
-          :enter="{ opacity: 1, y: 0, transition: { duration: 600, delay: 300 } }"
-        >
+        <div class="bio" v-motion :initial="{ opacity: 0, y: 24 }"
+          :enter="{ opacity: 1, y: 0, transition: { duration: 600, delay: 300 } }">
           <p>{{ $t('home.bioLine1') }}</p>
           <p>{{ $t('home.bioLine2') }}</p>
         </div>
 
         <!-- CTAs -->
-        <div
-          class="ctas"
-          v-motion
-          :initial="{ opacity: 0, y: 24 }"
-          :enter="{ opacity: 1, y: 0, transition: { duration: 600, delay: 400 } }"
-        >
+        <div class="ctas" v-motion :initial="{ opacity: 0, y: 24 }"
+          :enter="{ opacity: 1, y: 0, transition: { duration: 600, delay: 400 } }">
           <RouterLink to="/projects" class="btn btn-primary">
             ./view-projects.sh
           </RouterLink>
@@ -62,13 +42,8 @@
         </div>
       </div>
 
-      <!-- Right column: photo with corner brackets (per readme assets spec) -->
-      <div
-        class="home-photo-wrap"
-        v-motion
-        :initial="{ opacity: 0, y: 24 }"
-        :enter="{ opacity: 1, y: 0, transition: { duration: 600, delay: 200 } }"
-      >
+      <div class="home-photo-wrap" v-motion :initial="{ opacity: 0, y: 24 }"
+        :enter="{ opacity: 1, y: 0, transition: { duration: 600, delay: 200 } }">
         <div class="photo-frame">
           <img :src="photo" :alt="$t('home.profileAlt')" />
           <div class="photo-scanlines" aria-hidden="true" />
@@ -79,12 +54,8 @@
     </div>
 
     <!-- Tech stack -->
-    <div
-      class="tech"
-      v-motion
-      :initial="{ opacity: 0, y: 24 }"
-      :enter="{ opacity: 1, y: 0, transition: { duration: 600, delay: 500 } }"
-    >
+    <div class="tech" v-motion :initial="{ opacity: 0, y: 24 }"
+      :enter="{ opacity: 1, y: 0, transition: { duration: 600, delay: 500 } }">
       <div class="tech-label">
         <span class="sigil">$</span> ls ./tech-stack/
       </div>
@@ -108,6 +79,8 @@ const techStack = [
   'PHP',
   'WordPress',
   'Git',
+  'MySQL',
+  'Python'
 ]
 </script>
 
@@ -125,6 +98,7 @@ const techStack = [
   gap: 48px;
   align-items: center;
 }
+
 @media (min-width: 900px) {
   .home-grid {
     grid-template-columns: minmax(0, 1fr) auto;
@@ -142,6 +116,7 @@ const techStack = [
   font-size: 13px;
   margin-bottom: 16px;
 }
+
 .sigil {
   color: var(--color-terminal-accent);
 }
@@ -155,10 +130,12 @@ const techStack = [
   color: var(--color-terminal-fg);
   margin-bottom: 24px;
 }
+
 .name .first {
   color: var(--color-terminal-accent);
   display: block;
 }
+
 .name .last {
   display: block;
 }
@@ -186,6 +163,7 @@ const techStack = [
   gap: 16px;
   margin-bottom: 64px;
 }
+
 .btn {
   padding: 12px 28px;
   font-size: 13px;
@@ -199,22 +177,27 @@ const techStack = [
   display: inline-block;
   text-align: center;
 }
+
 .btn:active {
   transform: translateY(1px);
 }
+
 .btn-primary {
   background: var(--color-terminal-accent);
   color: #000;
   font-weight: 700;
 }
+
 .btn-primary:hover {
   box-shadow: 0 0 24px rgba(0, 255, 136, 0.35);
 }
+
 .btn-secondary {
   background: transparent;
   color: var(--color-terminal-accent);
   font-weight: 500;
 }
+
 .btn-secondary:hover {
   background: var(--color-terminal-accent-dim);
 }
@@ -227,6 +210,7 @@ const techStack = [
   flex-shrink: 0;
   justify-self: center;
 }
+
 .photo-frame {
   position: relative;
   width: 100%;
@@ -235,6 +219,7 @@ const techStack = [
   overflow: hidden;
   background: #000;
 }
+
 .photo-frame img {
   width: 100%;
   height: 100%;
@@ -242,30 +227,32 @@ const techStack = [
   display: block;
   filter: saturate(0.85) contrast(1.05);
 }
+
 .photo-scanlines {
   position: absolute;
   inset: 0;
-  background-image: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 2px,
-    rgba(0, 255, 136, 0.05) 2px,
-    rgba(0, 255, 136, 0.05) 4px
-  );
+  background-image: repeating-linear-gradient(0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 255, 136, 0.05) 2px,
+      rgba(0, 255, 136, 0.05) 4px);
   pointer-events: none;
   mix-blend-mode: screen;
 }
+
 .bracket {
   position: absolute;
   width: 24px;
   height: 24px;
 }
+
 .bracket-tl {
   top: -8px;
   left: -8px;
   border-top: 1px solid var(--color-terminal-accent);
   border-left: 1px solid var(--color-terminal-accent);
 }
+
 .bracket-br {
   bottom: -8px;
   right: -8px;
@@ -278,17 +265,20 @@ const techStack = [
   margin-top: 16px;
   max-width: 900px;
 }
+
 .tech-label {
   color: var(--color-terminal-muted);
   font-size: 12px;
   letter-spacing: 0.1em;
   margin-bottom: 20px;
 }
+
 .tags {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
+
 .tag {
   padding: 5px 14px;
   border: 1px solid var(--color-terminal-border);
@@ -301,6 +291,7 @@ const techStack = [
     background 0.2s ease;
   cursor: default;
 }
+
 .tag:hover {
   color: var(--color-terminal-accent);
   border-color: var(--color-terminal-accent);
@@ -311,8 +302,10 @@ const techStack = [
   .page {
     padding: 48px 24px 72px;
   }
+
   .home-photo-wrap {
-    order: -1; /* photo above text on mobile */
+    order: -1;
+    /* photo above text on mobile */
     width: 220px;
     height: 220px;
   }
@@ -322,13 +315,16 @@ const techStack = [
   .name {
     font-size: 48px;
   }
+
   .bio {
     padding-left: 16px;
   }
+
   .ctas {
     flex-direction: column;
     align-items: stretch;
   }
+
   .btn {
     width: 100%;
   }
