@@ -92,6 +92,19 @@ const projects = ref([
     demoLink: null,
     codeLink: 'https://github.com/Laloka2000/tech-news-bot',
   },
+  {
+    title: {
+      en: 'Tech Stock Watcher',
+      hu: 'Technológiai részvény figyelő',
+    },
+    description: {
+      en: 'A real-time tech stock watchlist built with Next.js 14, Tailwind CSS, and two free-tier APIs. Installable as a PWA on desktop and mobile.',
+      hu: 'Valós idejű tech részvényfigyelő lista, amely Next.js 14-gyel, Tailwind CSS-sel és 2 ingyenes szintű API-val készült PWA-ként telepíthető asztali számítógépre és mobilra.',
+    },
+    tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Yahoo Finance API', 'FinnHub API', 'Vercel'],
+    demoLink: 'https://tech-stock-watcher.vercel.app/',
+    codeLink: 'https://github.com/Laloka2000/tech-stock-watcher',
+  }
 ])
 </script>
 
