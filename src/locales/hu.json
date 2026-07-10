@@ -55,5 +55,9 @@
     "available": "Elérhető munkára",
     "builtWith": "Vue 3 + Tailwind-del készült",
     "navLabel": "Footer navigáció"
+  },
+
+  "boot": {
+    "ariaLabel": "Az oldal betöltése folyamatban..."
   }
 }
