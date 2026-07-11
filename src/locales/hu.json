@@ -25,20 +25,7 @@
   },
 
   "experience": {
-    "title": "Tapasztalat",
-    "jobTitle": "Szoftver- és alkalmazásfejlesztő",
-    "company": "ITZen Kft.",
-    "workPeriod": "2024 – 2025",
-    "jobDescription1": "Laravel + Vue.js webalkalmazások fejlesztése",
-    "jobDescription2": "Együttműködés fejlesztőkkel az üzleti követelmények alapján",
-    "jobDescription3": "Meglévő alkalmazások karbantartása, új funkciók fejlesztése",
-    "jobDescription4": "WordPress és WooCommerce weboldalak, webshopok",
-    "educationTitle": "Programtervező informatikus",
-    "educationPeriod": "2021 – 2024",
-    "educationInstitution": "Neumann János Egyetem",
-    "educationPoint1": "Felsőfokú szakképzés — programozó",
-    "educationPoint2": "Algoritmusok, adatbázisok, szoftverfejlesztési módszertanok",
-    "educationPoint3": "Több csapatprojekt, problémamegoldás gyakorlatban"
+    "title": "Tapasztalat és Tanulmányok"
   },
 
   "contact": {

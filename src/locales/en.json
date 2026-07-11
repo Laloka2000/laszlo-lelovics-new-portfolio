@@ -25,20 +25,7 @@
   },
 
   "experience": {
-    "title": "Experience",
-    "jobTitle": "Software & Application Developer",
-    "company": "ITZen LLC",
-    "workPeriod": "2024 – 2025",
-    "jobDescription1": "Laravel + Vue.js web application development",
-    "jobDescription2": "Collaborated with developers on business requirements",
-    "jobDescription3": "Maintained existing applications, added new features",
-    "jobDescription4": "WordPress & WooCommerce websites and webshops",
-    "educationTitle": "Software Information Technology",
-    "educationPeriod": "2021 – 2024",
-    "educationInstitution": "John von Neumann University",
-    "educationPoint1": "Associate Degree — Computer Programming",
-    "educationPoint2": "Algorithms, databases, software dev methodologies",
-    "educationPoint3": "Multiple team projects, problem-solving in practice"
+    "title": "Experience & Studies"
   },
 
   "contact": {

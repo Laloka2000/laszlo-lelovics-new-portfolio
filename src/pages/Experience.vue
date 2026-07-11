@@ -7,37 +7,45 @@
     </header>
 
     <div class="exp-list">
-      <!-- Work -->
-      <article class="exp-item" v-motion :initial="{ opacity: 0, y: 20 }"
-        :enter="{ opacity: 1, y: 0, transition: { duration: 500, delay: 120 } }">
+      <article v-for="(job, i) in work" :key="'work-' + i" class="exp-item" v-motion :initial="{ opacity: 0, y: 20 }"
+        :enter="{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 500, delay: 120 + i * 120 },
+        }">
         <div class="exp-meta">
-          <div class="exp-period">{{ $t('experience.workPeriod') }}</div>
-          <div class="exp-org">{{ $t('experience.company') }}</div>
+          <div class="exp-period">{{ job.period }}</div>
+          <div class="exp-org">{{ job.company[$i18n.locale] }}</div>
         </div>
         <div class="exp-body">
-          <h3 class="exp-role">{{ $t('experience.jobTitle') }}</h3>
+          <h3 class="exp-role">{{ job.title[$i18n.locale] }}</h3>
           <ul class="exp-points">
-            <li>{{ $t('experience.jobDescription1') }}</li>
-            <li>{{ $t('experience.jobDescription2') }}</li>
-            <li>{{ $t('experience.jobDescription3') }}</li>
-            <li>{{ $t('experience.jobDescription4') }}</li>
+            <li v-for="(point, j) in job.points" :key="j">
+              {{ point[$i18n.locale] }}
+            </li>
           </ul>
         </div>
       </article>
 
-      <!-- Education -->
-      <article class="exp-item" v-motion :initial="{ opacity: 0, y: 20 }"
-        :enter="{ opacity: 1, y: 0, transition: { duration: 500, delay: 240 } }">
+      <article v-for="(edu, i) in education" :key="'edu-' + i" class="exp-item" v-motion
+        :initial="{ opacity: 0, y: 20 }" :enter="{
+          opacity: 1,
+          y: 0,
+          transition: {
+            duration: 500,
+            delay: 120 + work.length * 120 + i * 120,
+          },
+        }">
         <div class="exp-meta">
-          <div class="exp-period">{{ $t('experience.educationPeriod') }}</div>
-          <div class="exp-org">{{ $t('experience.educationInstitution') }}</div>
+          <div class="exp-period">{{ edu.period }}</div>
+          <div class="exp-org">{{ edu.institution[$i18n.locale] }}</div>
         </div>
         <div class="exp-body">
-          <h3 class="exp-role">{{ $t('experience.educationTitle') }}</h3>
+          <h3 class="exp-role">{{ edu.title[$i18n.locale] }}</h3>
           <ul class="exp-points">
-            <li>{{ $t('experience.educationPoint1') }}</li>
-            <li>{{ $t('experience.educationPoint2') }}</li>
-            <li>{{ $t('experience.educationPoint3') }}</li>
+            <li v-for="(point, j) in edu.points" :key="j">
+              {{ point[$i18n.locale] }}
+            </li>
           </ul>
         </div>
       </article>
@@ -46,6 +54,96 @@
 </template>
 
 <script setup>
+
+import { ref } from 'vue';
+
+const work = ref([
+  {
+    period: '2026 - ',
+    company: {
+      en: "AppSolution (LLC)",
+      hu: "AppSolution Kft",
+    },
+    title: {
+      en: "Backend/fullstack developer",
+      hu: "Backend/fullstack fejlesztő",
+    },
+    points: [
+      {
+        en: "Developing REST APIs for mobile applications in PHP",
+        hu: "REST API-k fejlesztése mobil applikációkhoz PHP-ban",
+      },
+      {
+        en: "Development of administration and landing page interfaces",
+        hu: "Adminisztrációs és landing felületek fejlesztése",
+      },
+      {
+        en: "Managing and creating MySQL databases",
+        hu: "MySQL adatbázisok kezelése és létrehozása",
+      },
+    ]
+  },
+  {
+    period: '2024 – 2025',
+    company: {
+      en: 'ITZen LLC',
+      hu: 'ITZen Kft',
+    },
+    title: {
+      en: 'Software developer',
+      hu: 'Szoftverfejlesztő',
+    },
+    points: [
+      {
+        en: 'Laravel + Vue.js web application development',
+        hu: 'Laravel + Vue.js webalkalmazások fejlesztése',
+      },
+      {
+        en: 'Collaborated with developers on business requirements',
+        hu: 'Együttműködés fejlesztőkkel az üzleti követelmények alapján',
+      },
+      {
+        en: 'Maintained existing applications, added new features',
+        hu: 'Meglévő alkalmazások karbantartása, új funkciók fejlesztése',
+      },
+      {
+        en: 'Creating WordPress & WooCommerce websites and webshops',
+        hu: 'WordPress és WooCommerce weboldalak, webshopok készítése',
+      },
+    ],
+  },
+])
+
+
+const education = ref([
+  {
+    period: '2021 – 2024',
+    institution: {
+      en: 'John von Neumann University',
+      hu: 'Neumann János Egyetem',
+    },
+    title: {
+      en: 'Software Information Technology',
+      hu: 'Programtervező informatikus',
+    },
+    points: [
+      {
+        en: 'Associate Degree, Computer Programming',
+        hu: 'Felsőfokú szakképzés, programozó',
+      },
+      {
+        en: 'Algorithms, databases, software dev methodologies',
+        hu: 'Algoritmusok, adatbázisok, szoftverfejlesztési módszertanok',
+      },
+      {
+        en: 'Multiple team projects, problem-solving in practice',
+        hu: 'Több csapatprojekt, problémamegoldás gyakorlatban',
+      },
+    ],
+  },
+])
+
+
 </script>
 
 <style scoped>
