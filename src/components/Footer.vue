@@ -18,6 +18,8 @@
                 <a href="https://www.linkedin.com/in/l%C3%A1szl%C3%B3-lelovics-987046274/" target="_blank"
                     rel="noopener noreferrer" class="social-link">LinkedIn ↗</a>
                 <a href="mailto:lelovicslaszlo10@gmail.com" class="social-link">Email ↗</a>
+                <a href="https://beacons.ai/laszlolelovics" target="_blank" 
+                    rel="noopener noreferrer" class="social-link">Beacons ↗</a>
             </div>
             <div class="footer-bottom">
                 <span class="copy">

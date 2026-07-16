@@ -41,6 +41,12 @@ const links = [
     href: 'https://www.linkedin.com/in/l%C3%A1szl%C3%B3-lelovics-987046274/',
     external: true,
   },
+  {
+    label: 'BEACONS',
+    value: 'beacons.ai/laszlolelovics',
+    href: 'https://beacons.ai/laszlolelovics',
+    external: true,
+  }
 ]
 </script>
 
