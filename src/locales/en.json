@@ -1,11 +1,16 @@
 {
   "nav": {
     "home": "Home",
+    "work": "Work",
+    "about": "About",
+    "stack": "Stack",
     "projects": "Projects",
     "results": "Results",
     "experience": "Experience",
+    "path": "Experience & Education",
     "contact": "Contact",
-    "logoAlt": "Laszlo Lelovics — home"
+    "logoAlt": "Laszlo Lelovics — home",
+    "getInTouch": "Get in touch"
   },
 
   "home": {
@@ -15,10 +20,41 @@
     "role": "Software Developer",
     "bioLine1": "Motivated developer building modern web applications.",
     "bioLine2": "Full-stack: Vue.js, React, Node.js, PHP.",
-    "profileAlt": "Portrait of Laszlo Lelovics"
+    "profileAlt": "Portrait of Laszlo Lelovics",
+    "available": "Available for new projects",
+    "location": "Kecskemét · HU",
+    "ctaProjects": "./view-projects.sh",
+    "ctaContact": "./contact.sh"
+  },
+
+  "work": {
+    "kicker": "$ ls ./services/",
+    "title": "What I do",
+    "statYears": "years shipping production web applications in small, fast-moving teams."
+  },
+
+  "about": {
+    "kicker": "$ cat ./about.md",
+    "title": "About me",
+    "p1": "I build modern, user-friendly software that serves business needs across the board. <strong>Precision and careful craftsmanship</strong> define how I work, whether it's a small UI detail or a more complex piece of backend logic.",
+    "p2": "I love creating and building systems that <strong>real users</strong> actually use, day to day. That's what first drew me to engineering thinking in the first place turning an idea into a working, reliable product.",
+    "p3": "What matters most to me is <strong>clarity</strong> interfaces that load fast, code the next developer can easily follow. I'd rather ship something small and solid than something overengineered and fragile.",
+    "factLocation": "Based",
+    "factLang": "Lang",
+    "factFocus": "Focus",
+    "factFocusValue": "Vue · Laravel · PHP",
+    "factStatus": "Status",
+    "factStatusValue": "Open to work"
+  },
+
+  "stack": {
+    "kicker": "$ ls ./tech-stack/",
+    "title": "The stack",
+    "label": "Daily drivers"
   },
 
   "projects": {
+    "kicker": "$ ls ./projects/",
     "title": "Projects",
     "liveDemo": "Demo",
     "codeBase": "Code"
@@ -28,10 +64,15 @@
     "title": "Experience & Studies"
   },
 
+  "path": {
+    "kicker": "$ cat ./path.md",
+    "title": "Experience & education"
+  },
+
   "contact": {
     "kicker": "say hello",
-    "title": "Let's get in touch",
-    "subtitle": "Send me a message or reach out on social media."
+    "title": "Let's build something.",
+    "subtitle": "Open to frontend, backend and full-stack roles, freelance builds and interesting problems. I reply quickly."
   },
 
   "results": {

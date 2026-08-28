@@ -83,6 +83,12 @@ let progInterval = null
 
 onMounted(() =>
 {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches)
+    {
+        emit('done')
+        return
+    }
+
     bootLines.forEach((line, i) =>
     {
         timers.push(setTimeout(() =>

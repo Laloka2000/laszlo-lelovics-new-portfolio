@@ -1,11 +1,16 @@
 {
   "nav": {
     "home": "Kezdőlap",
+    "work": "Munka",
+    "about": "Rólam",
+    "stack": "Eszközök",
     "projects": "Projektek",
     "results": "Eredmények",
     "experience": "Tapasztalat",
+    "path": "Tapasztalat és Tanulmányok",
     "contact": "Kapcsolat",
-    "logoAlt": "Lelovics László — kezdőlap"
+    "logoAlt": "Lelovics László — kezdőlap",
+    "getInTouch": "Vegyük fel a kapcsolatot"
   },
 
   "home": {
@@ -15,10 +20,41 @@
     "role": "Szoftverfejlesztő",
     "bioLine1": "Motivált fejlesztő, aki modern webalkalmazásokat épít.",
     "bioLine2": "Full-stack: Vue.js, React, Node.js, PHP.",
-    "profileAlt": "Lelovics László portré"
+    "profileAlt": "Lelovics László portré",
+    "available": "Nyitott új projektekre",
+    "location": "Kecskemét · HU",
+    "ctaProjects": "./view-projects.sh",
+    "ctaContact": "./contact.sh"
+  },
+
+  "work": {
+    "kicker": "$ ls ./services/",
+    "title": "Amivel foglalkozom",
+    "statYears": "éve fejlesztek éles webalkalmazásokat kis, gyors csapatokban."
+  },
+
+  "about": {
+    "kicker": "$ cat ./about.md",
+    "title": "Rólam",
+    "p1": "Modern és felhasználóbarát szoftvereket építek, amelyek minden téren kiszolgálják az üzleti igényeket. <strong>A pontosság és a precíz munkavégzés<\/strong> jellemzi a hozzáállásomat, legyen szó egy apró UI-részletről vagy egy komplexebb backend logikáról.",
+    "p2": "Imádok alkotni és olyan rendszereket építeni, amiket <strong>valódi felhasználók<\/strong> használnak nap mint nap. Ez az, ami mindig is vonzott a mérnöki gondolkodásmódhoz, egy ötletből működő, megbízható terméket formálni.",
+    "p3": "Amit igazán fontosnak tartok, az az <strong>érthetőség<\/strong> gyorsan betöltő felületek, kód, amit a következő fejlesztő is könnyen követ. Inkább szállítok le valami kicsit és megbízhatót, mint valami túlbonyolítottat és törékenyet.",
+    "factLocation": "Székhely",
+    "factLang": "Nyelv",
+    "factFocus": "Fókusz",
+    "factFocusValue": "Vue · Laravel · PHP",
+    "factStatus": "Státusz",
+    "factStatusValue": "Nyitott munkára"
+  },
+
+  "stack": {
+    "kicker": "$ ls ./tech-stack/",
+    "title": "Eszköztár",
+    "label": "Napi szinten használt"
   },
 
   "projects": {
+    "kicker": "$ ls ./projects/",
     "title": "Projektek",
     "liveDemo": "Demó",
     "codeBase": "Kód"
@@ -28,17 +64,22 @@
     "title": "Tapasztalat és Tanulmányok"
   },
 
+  "path": {
+    "kicker": "$ cat ./path.md",
+    "title": "Tapasztalat és tanulmányok"
+  },
+
   "contact": {
     "kicker": "üdv",
-    "title": "Lépjünk kapcsolatba",
-    "subtitle": "Írj egy üzenetet, vagy keress a közösségi médiában."
+    "title": "Építsünk valamit.",
+    "subtitle": "Nyitott vagyok frontend, backend és full-stack szerepekre, freelance munkákra és érdekes problémákra. Gyorsan válaszolok."
   },
 
   "results": {
     "comingSoon": "Hamarosan."
   },
 
-  "footer" : {
+  "footer": {
     "available": "Elérhető munkára",
     "builtWith": "Vue 3 + Tailwind-del készült",
     "navLabel": "Footer navigáció"

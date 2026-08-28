@@ -8,7 +8,8 @@
                 </span>
             </div>
             <nav class="footer-links" :aria-label="$t('footer.navLabel')">
-                <RouterLink v-for="item in navItems" :key="item.to" :to="item.to" class="footer-link">
+                <RouterLink v-for="item in navItems" :key="item.id" :to="{ path: '/', hash: '#' + item.id }"
+                    class="footer-link">
                     {{ $t(item.key) }}
                 </RouterLink>
             </nav>
@@ -23,7 +24,7 @@
             </div>
             <div class="footer-bottom">
                 <span class="copy">
-                    <span class="sigil">$</span> echo "© {{ year }} Lelovics László"
+                    <span class="sigil">$</span> echo "© {{ currentYear }} Lelovics László"
                 </span>
                 <span class="built">
                     <span class="sigil">// </span>{{ $t('footer.builtWith') }}
@@ -34,15 +35,15 @@
 </template>
 
 <script setup>
-import { RouterLink } from 'vue-router'
-
 const currentYear = new Date().getFullYear()
 
 const navItems = [
-    { to: '/', key: 'nav.home' },
-    { to: '/projects', key: 'nav.projects' },
-    { to: '/experience', key: 'nav.experience' },
-    { to: '/contact', key: 'nav.contact' },
+    { id: 'work', key: 'nav.work' },
+    { id: 'about', key: 'nav.about' },
+    { id: 'stack', key: 'nav.stack' },
+    { id: 'projects', key: 'nav.projects' },
+    { id: 'path', key: 'nav.path' },
+    { id: 'contact', key: 'nav.contact' },
 ]
 </script>
 
