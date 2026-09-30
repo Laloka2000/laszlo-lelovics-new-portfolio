@@ -399,7 +399,7 @@ const projects = [
 /* ── experience & education ── */
 const work = [
   {
-    period: '2026 –',
+    period: '2026 – 2026',
     company: { en: 'AppSolution LLC', hu: 'AppSolution Kft' },
     title: { en: 'Backend / Fullstack Developer', hu: 'Backend / fullstack fejlesztő' },
     points: [
@@ -423,11 +423,21 @@ const work = [
 
 const education = [
   {
+    period: '2026 - ',
+    institution: { en: 'University of Szeged', hu: 'Szegedi Tudományegyetem' },
+    title: { en: 'Computer Science', hu: 'Programtervező Informatikus' },
+    points: [
+      { en: 'Bachelor degree', hu: 'Alapképzés (diploma)' },
+      { en: 'Algorithms, databases, software dev methodologies', hu: 'Algoritmusok, adatbázisok, szoftverfejlesztési módszertanok' },
+      { en: 'Multiple team projects, practical problem-solving', hu: 'Több csapatprojekt, problémamegoldás gyakorlatban' },
+    ],
+  },
+  {
     period: '2021 – 2024',
     institution: { en: 'John von Neumann University', hu: 'Neumann János Egyetem' },
-    title: { en: 'Software Information Technology', hu: 'Programtervező informatikus' },
+    title: { en: 'Software Information Technology', hu: 'Programtervező informatikus (Foszk)' },
     points: [
-      { en: 'Associate degree, computer programming', hu: 'Felsőfokú szakképzés, programozó' },
+      { en: 'Associate degree', hu: 'Felsőfokú szakképzés' },
       { en: 'Algorithms, databases, software dev methodologies', hu: 'Algoritmusok, adatbázisok, szoftverfejlesztési módszertanok' },
       { en: 'Multiple team projects, practical problem-solving', hu: 'Több csapatprojekt, problémamegoldás gyakorlatban' },
     ],
