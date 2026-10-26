@@ -14,6 +14,8 @@
     <Footer />
   </div>
 
+  <CookieBanner v-if="!showBoot" />
+
   <Teleport to="body">
     <div ref="glowRef" aria-hidden="true" />
   </Teleport>
@@ -25,6 +27,7 @@ import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
 import BackgroundLines from './components/BackgroundLines.vue'
 import BootScreen from './components/BootScreen.vue'
+import CookieBanner from './components/CookieBanner.vue'
 import { useCursorGlow } from './composables/useCursorGlow.js'
 
 const { glowRef } = useCursorGlow()

@@ -69,7 +69,7 @@
   "contact": {
     "kicker": "üdv",
     "title": "Építsünk valamit.",
-    "subtitle": "Nyitott vagyok frontend, backend és full-stack szerepekre, freelance munkákra és érdekes problémákra. Gyorsan válaszolok."
+    "subtitle": "Nyitott vagyok frontend, backend és full-stack pozíciókra, freelance munkákra és érdekes problémákra. Gyorsan válaszolok."
   },
 
   "results": {
@@ -79,7 +79,31 @@
   "footer": {
     "available": "Elérhető munkára",
     "builtWith": "Vue 3 + Tailwind-del készült",
-    "navLabel": "Footer navigáció"
+    "navLabel": "Footer navigáció",
+    "cookieSettings": "süti beállítások"
+  },
+
+  "cookies": {
+    "dialogLabel": "Süti hozzájárulás",
+    "title": "Sütik",
+    "settingsTitle": "Süti beállítások",
+    "body": "Google Analytics-szel mérem az oldal látogatottságát, hogy lássam, mi működik. Csak akkor töltöm be, ha hozzájárulsz. A döntésedet bármikor módosíthatod a lábléc „süti beállítások” linkjével.",
+    "acceptAria": "Analitikai sütik elfogadása",
+    "rejectAria": "Analitikai sütik elutasítása",
+    "rejectAllAria": "Minden nem szükséges süti elutasítása",
+    "saveAria": "Beállítások mentése",
+    "settings": "beállítások",
+    "back": "vissza",
+    "necessary": {
+      "title": "szükséges",
+      "badge": "mindig aktív",
+      "desc": "nyelv, boot-animáció, ez a döntés · böngésző tárhely"
+    },
+    "analytics": {
+      "title": "analitika",
+      "badge": "Google Analytics 4",
+      "desc": "_ga, _ga_TS53KENSP5 · 2 év · látogatott oldalak, eszköz típusa"
+    }
   },
 
   "boot": {

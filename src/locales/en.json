@@ -79,7 +79,31 @@
   "footer": {
     "available": "Available for work",
     "builtWith": "Built with Vue 3 + Tailwind",
-    "navLabel": "Footer navigation"
+    "navLabel": "Footer navigation",
+    "cookieSettings": "cookie settings"
+  },
+
+  "cookies": {
+    "dialogLabel": "Cookie consent",
+    "title": "Cookies",
+    "settingsTitle": "Cookie settings",
+    "body": "I use Google Analytics to see how the site is visited and what works. It only loads if you agree. You can change your choice any time with the \"cookie settings\" link in the footer.",
+    "acceptAria": "Accept analytics cookies",
+    "rejectAria": "Reject analytics cookies",
+    "rejectAllAria": "Reject all non-essential cookies",
+    "saveAria": "Save settings",
+    "settings": "settings",
+    "back": "back",
+    "necessary": {
+      "title": "necessary",
+      "badge": "always on",
+      "desc": "language, boot animation, this choice · browser storage"
+    },
+    "analytics": {
+      "title": "analytics",
+      "badge": "Google Analytics 4",
+      "desc": "_ga, _ga_TS53KENSP5 · 2 years · pages visited, device type"
+    }
   },
 
   "boot": {

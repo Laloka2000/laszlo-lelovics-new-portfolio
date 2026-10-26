@@ -26,6 +26,9 @@
                 <span class="copy">
                     <span class="sigil">$</span> echo "© {{ currentYear }} Lelovics László"
                 </span>
+                <button type="button" class="cookie-btn" @click="openSettings">
+                    <span class="sigil">// </span>{{ $t('footer.cookieSettings') }}
+                </button>
                 <span class="built">
                     <span class="sigil">// </span>{{ $t('footer.builtWith') }}
                 </span>
@@ -36,6 +39,9 @@
 
 <script setup>
 import { navItems } from '../navItems.js'
+import { useConsent } from '../composables/useConsent.js'
+
+const { openSettings } = useConsent()
 
 const currentYear = new Date().getFullYear()
 </script>
@@ -149,6 +155,21 @@ const currentYear = new Date().getFullYear()
 }
 
 .sigil {
+    color: var(--color-terminal-accent);
+}
+
+.cookie-btn {
+    padding: 0;
+    background: none;
+    border: 0;
+    font: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.cookie-btn:hover {
     color: var(--color-terminal-accent);
 }
 
