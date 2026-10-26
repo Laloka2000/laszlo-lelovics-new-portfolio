@@ -61,7 +61,7 @@
     </section>
 
     <!-- ══════════ WORK / WHAT I DO ══════════ -->
-    <section id="work" class="page">
+    <section id="services" class="page">
       <div class="shead">
         <div>
           <div class="kicker">{{ $t('work.kicker') }}</div>
@@ -70,10 +70,12 @@
       </div>
 
       <div class="bento">
-        <div v-for="(item, i) in workItems" :key="item.title[locale]" class="card"
-          :class="item.span" v-motion :initial="{ opacity: 0, y: 20 }"
+        <div v-for="(item, i) in workItems" :key="item.title[locale]" class="card" :class="item.span" v-motion
+          :initial="{ opacity: 0, y: 20 }"
           :visibleOnce="{ opacity: 1, y: 0, transition: { duration: 450, delay: i * 60 } }">
-          <div class="ico"><component :is="item.icon" :size="18" /></div>
+          <div class="ico">
+            <component :is="item.icon" :size="18" />
+          </div>
           <h3>{{ item.title[locale] }}</h3>
           <p>{{ item.desc[locale] }}</p>
         </div>
@@ -110,7 +112,7 @@
             <span class="k">{{ $t('about.factLocation') }}</span>
           </div>
           <div class="frow">
-            <Languages :size="16" /><span class="v">Hungarian · English</span>
+            <Languages :size="16" /><span class="v">{{ $t('about.factLangValue') }}</span>
             <span class="k">{{ $t('about.factLang') }}</span>
           </div>
           <div class="frow">
@@ -180,7 +182,7 @@
     </section>
 
     <!-- ══════════ PATH (EXPERIENCE + EDUCATION) ══════════ -->
-    <section id="path" class="page">
+    <section id="experience" class="page">
       <div class="shead">
         <div>
           <div class="kicker">{{ $t('path.kicker') }}</div>
@@ -192,13 +194,17 @@
         <div v-for="(job, i) in work" :key="job.company.en" class="trow" v-motion :initial="{ opacity: 0, y: 20 }"
           :visibleOnce="{ opacity: 1, y: 0, transition: { duration: 450, delay: i * 90 } }">
           <div>
-            <div class="torg"><span class="ico"><Briefcase :size="16" /></span>{{ job.company[locale] }}</div>
+            <div class="torg"><span class="ico">
+                <Briefcase :size="16" />
+              </span>{{ job.company[locale] }}</div>
             <div class="tper">{{ job.period }}</div>
           </div>
           <div>
             <h3>{{ job.title[locale] }}</h3>
             <ul>
-              <li v-for="(point, j) in job.points" :key="j"><Check :size="15" />{{ point[locale] }}</li>
+              <li v-for="(point, j) in job.points" :key="j">
+                <Check :size="15" />{{ point[locale] }}
+              </li>
             </ul>
           </div>
         </div>
@@ -207,13 +213,17 @@
           :initial="{ opacity: 0, y: 20 }"
           :visibleOnce="{ opacity: 1, y: 0, transition: { duration: 450, delay: (work.length + i) * 90 } }">
           <div>
-            <div class="torg"><span class="ico"><GraduationCap :size="16" /></span>{{ edu.institution[locale] }}</div>
+            <div class="torg"><span class="ico">
+                <GraduationCap :size="16" />
+              </span>{{ edu.institution[locale] }}</div>
             <div class="tper">{{ edu.period }}</div>
           </div>
           <div>
             <h3>{{ edu.title[locale] }}</h3>
             <ul>
-              <li v-for="(point, j) in edu.points" :key="j"><Check :size="15" />{{ point[locale] }}</li>
+              <li v-for="(point, j) in edu.points" :key="j">
+                <Check :size="15" />{{ point[locale] }}
+              </li>
             </ul>
           </div>
         </div>
@@ -242,8 +252,9 @@
 <script setup>
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import photo from '../assets/images/photo.jpg'
-import {
+import photo from '../assets/images/photo.png'
+import
+{
   FolderGit2,
   Mail,
   MapPin,
@@ -264,10 +275,12 @@ import {
 
 const { locale } = useI18n()
 
-function scrollTo(e, id) {
+function scrollTo(e, id)
+{
   e.preventDefault()
   const el = document.getElementById(id)
-  if (el) {
+  if (el)
+  {
     const top = el.getBoundingClientRect().top + window.scrollY - 84
     window.scrollTo({ top, behavior: 'smooth' })
   }
@@ -429,7 +442,7 @@ const education = [
     points: [
       { en: 'Bachelor degree', hu: 'Alapképzés (diploma)' },
       { en: 'Algorithms, databases, software dev methodologies', hu: 'Algoritmusok, adatbázisok, szoftverfejlesztési módszertanok' },
-      { en: 'Multiple team projects, practical problem-solving', hu: 'Több csapatprojekt, problémamegoldás gyakorlatban' },
+      { en: 'Multiple team projects, practical problem-solving', hu: 'Csapatprojektek, problémamegoldás gyakorlatban' },
     ],
   },
   {
@@ -439,7 +452,7 @@ const education = [
     points: [
       { en: 'Associate degree', hu: 'Felsőfokú szakképzés' },
       { en: 'Algorithms, databases, software dev methodologies', hu: 'Algoritmusok, adatbázisok, szoftverfejlesztési módszertanok' },
-      { en: 'Multiple team projects, practical problem-solving', hu: 'Több csapatprojekt, problémamegoldás gyakorlatban' },
+      { en: 'Multiple team projects, practical problem-solving', hu: 'Csapatprojektek, problémamegoldás gyakorlatban' },
     ],
   },
 ]
@@ -508,6 +521,7 @@ const contactLinks = [
   0% {
     transform: translate(0, 0) rotate(0deg);
   }
+
   100% {
     transform: translate(14px, -20px) rotate(10deg);
   }
@@ -580,7 +594,7 @@ const contactLinks = [
   max-width: 44ch;
 }
 
-.bio p + p {
+.bio p+p {
   margin-top: 6px;
 }
 
@@ -611,7 +625,6 @@ const contactLinks = [
 
 .btn-primary:hover {
   background: #7dffc0;
-  transform: translateY(-2px);
 }
 
 .btn-secondary {
@@ -623,7 +636,6 @@ const contactLinks = [
 .btn-secondary:hover {
   border-color: var(--color-terminal-accent);
   color: var(--color-terminal-accent);
-  transform: translateY(-2px);
 }
 
 .hero-photo {
@@ -726,7 +738,6 @@ const contactLinks = [
 .card:hover {
   border-color: rgba(0, 255, 136, 0.28);
   background: var(--color-terminal-accent-dim);
-  transform: translateY(-3px);
 }
 
 .card .ico {
@@ -875,7 +886,6 @@ const contactLinks = [
 
 .chip:hover {
   border-color: rgba(0, 255, 136, 0.3);
-  transform: translateY(-3px);
 }
 
 .chip img {
@@ -917,7 +927,6 @@ const contactLinks = [
 .pcard:hover {
   border-color: rgba(0, 255, 136, 0.28);
   background: var(--color-terminal-accent-dim);
-  transform: translateY(-3px);
 }
 
 .ptop {
@@ -940,8 +949,8 @@ const contactLinks = [
 }
 
 .plinks a {
-  width: 33px;
-  height: 33px;
+  width: 38px;
+  height: 38px;
   border-radius: 9px;
   display: grid;
   place-items: center;
@@ -1087,7 +1096,7 @@ const contactLinks = [
   margin: 14px 0 12px;
 }
 
-.contact-card > p {
+.contact-card>p {
   color: var(--color-terminal-muted);
   font-size: 16px;
   line-height: 1.65;
@@ -1124,18 +1133,43 @@ const contactLinks = [
 .clink:hover {
   border-color: var(--color-terminal-accent);
   color: var(--color-terminal-accent);
-  transform: translateY(-2px);
+}
+
+@media (hover: hover) {
+
+  .btn:hover,
+  .clink:hover {
+    transform: translateY(-2px);
+  }
+
+  .card:hover,
+  .chip:hover,
+  .pcard:hover {
+    transform: translateY(-3px);
+  }
 }
 
 /* ── responsive ── */
-@media (max-width: 900px) {
+
+/* tablet: keep the hero side-by-side, just tighter */
+@media (max-width: 1024px) {
   .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    grid-template-columns: 1fr 0.75fr;
+    gap: 36px;
   }
 
-  .bento,
-  .proj-grid {
+  .trow {
+    grid-template-columns: 180px 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 900px) {
+  .page {
+    padding: 80px 28px;
+  }
+
+  .bento {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1147,19 +1181,74 @@ const contactLinks = [
     grid-template-columns: 1fr;
   }
 
+  .abody {
+    padding: 28px;
+  }
+
   .trow {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 16px;
+    padding: 24px;
+  }
+}
+
+/* small tablet / large phone: hero stacks, photo becomes a compact square */
+@media (max-width: 720px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .hero-photo {
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 1 / 1;
   }
 }
 
 @media (max-width: 640px) {
   .page {
-    padding: 72px 20px;
+    padding: 64px 20px;
   }
 
   .hero-wrap .page {
-    padding-top: 56px;
+    padding-top: 32px;
+    padding-bottom: 64px;
+  }
+
+  .hero-photo {
+    max-width: 240px;
+    border-radius: 18px;
+  }
+
+  .badge {
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    padding: 8px 11px;
+    border-radius: 10px;
+  }
+
+  .name {
+    margin: 18px 0 14px;
+  }
+
+  .bio {
+    font-size: 15px;
+  }
+
+  .ctas {
+    margin-top: 26px;
+  }
+
+  .ctas .btn {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+
+  .shead {
+    margin-bottom: 26px;
+    padding-bottom: 16px;
   }
 
   .bento,
@@ -1172,8 +1261,59 @@ const contactLinks = [
     grid-column: span 1;
   }
 
+  .card,
+  .pcard,
+  .facts {
+    padding: 20px;
+  }
+
+  .abody {
+    padding: 22px;
+  }
+
+  .abody :deep(p) {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .stackgrid {
+    grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+    gap: 8px;
+  }
+
+  .trow {
+    padding: 20px;
+  }
+
+  .trow h3 {
+    font-size: 17px;
+  }
+
+  .trow li {
+    font-size: 14px;
+  }
+
   .contact-card {
-    padding: 40px 22px;
+    padding: 40px 20px;
+    border-radius: 20px;
+  }
+
+  .clist {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .clink {
+    justify-content: center;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* fewer floating icons on narrow screens so they don't crowd the text */
+@media (max-width: 640px) {
+  .float-icon:nth-child(odd) {
+    display: none;
   }
 }
 </style>

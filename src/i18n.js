@@ -12,4 +12,6 @@ const i18n = createI18n({
     }
 })
 
+document.documentElement.setAttribute('lang', i18n.global.locale.value)
+
 export default i18n

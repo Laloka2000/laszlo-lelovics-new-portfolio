@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@source "../src";
+@source "../";
 
 /* ─────────── Design tokens (Tailwind v4 @theme) ───────────
    In Tailwind v4 the design system lives in CSS.

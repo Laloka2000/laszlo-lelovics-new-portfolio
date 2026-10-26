@@ -40,7 +40,7 @@ function changeLocale(lang)
   cursor: pointer;
   font: inherit;
   letter-spacing: inherit;
-  padding: 0 2px;
+  padding: 6px 4px;
   transition: color 0.2s ease;
 }
 

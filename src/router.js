@@ -8,7 +8,7 @@ import Results from "./pages/Results.vue";
 const routes = [
   { path: "/", name: "home", component: Home },
   { path: "/projects", redirect: () => ({ path: "/", hash: "#projects" }) },
-  { path: "/experience", redirect: () => ({ path: "/", hash: "#path" }) },
+  { path: "/experience", redirect: () => ({ path: "/", hash: "#experience" }) },
   { path: "/contact", redirect: () => ({ path: "/", hash: "#contact" }) },
   { path: "/results", name: "results", component: Results },
 ];

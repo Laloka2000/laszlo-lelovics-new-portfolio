@@ -35,16 +35,9 @@
 </template>
 
 <script setup>
-const currentYear = new Date().getFullYear()
+import { navItems } from '../navItems.js'
 
-const navItems = [
-    { id: 'work', key: 'nav.work' },
-    { id: 'about', key: 'nav.about' },
-    { id: 'stack', key: 'nav.stack' },
-    { id: 'projects', key: 'nav.projects' },
-    { id: 'path', key: 'nav.path' },
-    { id: 'contact', key: 'nav.contact' },
-]
+const currentYear = new Date().getFullYear()
 </script>
 
 <style scoped>
@@ -52,18 +45,18 @@ const navItems = [
     position: relative;
     z-index: 10;
     border-top: 1px solid var(--color-terminal-border);
-    padding: 40px 48px 32px;
+    padding: 40px 28px 32px;
     margin-top: auto;
 }
 
 .footer-inner {
+    max-width: 1124px;
+    margin: 0 auto;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 40px;
-    flex-wrap: wrap;
-    margin-bottom: 32px;
 }
 
 .footer-left {
@@ -146,6 +139,7 @@ const navItems = [
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    flex-basis: 100%;
     gap: 12px;
     padding-top: 12px;
     border-top: 1px solid var(--color-terminal-border);
@@ -158,13 +152,15 @@ const navItems = [
     color: var(--color-terminal-accent);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
     .footer {
-        padding: 32px 24px 24px;
+        padding: 32px 20px 24px;
     }
     .footer-inner {
-        flex-direction: column;
-        gap: 28px;
+        gap: 28px 48px;
+    }
+    .footer-left {
+        flex-basis: 100%;
     }
     .footer-bottom {
         flex-direction: column;

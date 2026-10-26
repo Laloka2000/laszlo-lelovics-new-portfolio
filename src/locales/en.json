@@ -1,16 +1,16 @@
 {
   "nav": {
-    "home": "Home",
-    "work": "Work",
+    "services": "Services",
     "about": "About",
     "stack": "Stack",
     "projects": "Projects",
-    "results": "Results",
     "experience": "Experience",
-    "path": "Experience & Education",
     "contact": "Contact",
+    "results": "Results",
     "logoAlt": "Laszlo Lelovics — home",
-    "getInTouch": "Get in touch"
+    "getInTouch": "Get in touch",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
 
   "home": {
@@ -44,7 +44,8 @@
     "factFocus": "Focus",
     "factFocusValue": "Vue · Laravel · PHP",
     "factStatus": "Status",
-    "factStatusValue": "Open to work"
+    "factStatusValue": "Open to work",
+    "factLangValue": "Hungarian · English"
   },
 
   "stack": {
@@ -58,10 +59,6 @@
     "title": "Projects",
     "liveDemo": "Demo",
     "codeBase": "Code"
-  },
-
-  "experience": {
-    "title": "Experience & Studies"
   },
 
   "path": {
